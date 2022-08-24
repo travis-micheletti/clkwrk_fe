@@ -10,7 +10,7 @@ const WelcomePage = () => {
 
 	return redirectNow ? (
 		
-		<Navigate replace to='/home' onChange={setRedirectNow(false)}/>
+		<Navigate replace to='/home'/>
 	) : 
 	
 	(
