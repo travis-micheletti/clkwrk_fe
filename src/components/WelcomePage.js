@@ -4,12 +4,16 @@ import { Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const WelcomePage = () => {
-
 	const [redirectNow, setRedirectNow] = useState(false)
 	setTimeout(() => setRedirectNow(true), 2000)
+
+
 	return redirectNow ? (
-		<Navigate replace to='/*' />
-	) : (
+		
+		<Navigate replace to='/home' onChange={setRedirectNow(false)}/>
+	) : 
+	
+	(
 		<motion.div className='displayContainer'>
 			welcome
 		</motion.div>

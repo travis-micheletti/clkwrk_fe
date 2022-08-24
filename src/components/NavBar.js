@@ -16,7 +16,7 @@ const NavBar = () => {
 	return loggedIn ? (
 		<motion.div className='fixed bg-slate-500 w-screen h-10 flex justify-center text-2xl'>
 			<UserSettings />
-			<Link to='/'>home</Link>
+			<Link to='/home'>home</Link>
 			<Link to='/employees'>employees</Link>
 			<Link to='/welcome'>welcome</Link>
 			<Link to='/profile'>profile</Link>
@@ -26,7 +26,7 @@ const NavBar = () => {
 	) : (
 		<motion.div className='fixed bg-slate-500 w-screen h-10 flex justify-center text-2xl'>
 			<UserSettings />
-			<Link to='/'>home</Link>
+			<Link to='/home'>home</Link>
 			<Link to='/employees'>employees</Link>
 			<Link to='/welcome'>welcome</Link>
 			<Link to='/profile'>profile</Link>
