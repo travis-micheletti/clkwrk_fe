@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App flex h-screen">
+    <div className="App flex h-screen w-screen">
     	<div className='text-3xl m-auto'>Hi from clkwrk main app</div>
       <AnimatedRoutes />
       <NavBar />
