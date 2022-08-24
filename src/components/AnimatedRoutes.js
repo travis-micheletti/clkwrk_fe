@@ -9,7 +9,7 @@ import LoggedOut from './LoggedOut'
 import ViewEmployees from './ViewEmployees'
 import WelcomePage from './WelcomePage'
 
-function AnimatedRoutes (= () => ){
+const AnimatedRoutes = () => {
 	const location = useLocation()
 	return (
 		<AnimatePresence>
@@ -23,3 +23,5 @@ function AnimatedRoutes (= () => ){
 		</AnimatePresence>
 	)
 }
+
+export default AnimatedRoutes

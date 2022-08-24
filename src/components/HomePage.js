@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const HomePage = () => {
 	return (
 		<motion.div>
-			Howdy from the Home Page
+			home
 		</motion.div>
 	)
 }

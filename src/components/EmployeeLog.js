@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const EmployeeLog = () => {
 	return (
 		<motion.div>
-			Howdy from the Employee Log
+			employee log
 		</motion.div>
 	)
 }

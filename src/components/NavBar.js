@@ -6,7 +6,7 @@ const NavBar = () => {
 	return (
 		<motion.div>
 			<UserSettings />
-			Howdy from the Nav Bar!
+			navbar
 		</motion.div>
 	)
 }

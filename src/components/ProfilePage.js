@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 const ProfilePage = () => {
 	return (
 		<motion.div>
+			profile
 			<EmployeeLog />
-			Howdy from the Profile Page
 		</motion.div>
 	)
 }

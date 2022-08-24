@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const UserSettings = () => {
 	return (
 		<motion.div>
-			Howdy from the User Settings Page
+			usersettings
 		</motion.div>
 	)
 }

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const WelcomePage = () => {
 	return (
 		<motion.div>
-			Howdy from the Welcome Page
+			welcome
 		</motion.div>
 	)
 }
