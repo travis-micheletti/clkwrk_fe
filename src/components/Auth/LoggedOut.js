@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const LoggedOut = () => {
 	return (
-		<motion.div>
+		<motion.div className='displayContainer'>
 			Howdy from the Logged Out Page
 		</motion.div>
 	)

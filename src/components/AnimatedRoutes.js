@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 // importing components
 import HomePage from './HomePage'
 import ProfilePage from './ProfilePage'
-import LoggedOut from './LoggedOut'
+import LoggedOut from './Auth/LoggedOut'
 import ViewEmployees from './ViewEmployees'
 import WelcomePage from './WelcomePage'
 

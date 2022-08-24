@@ -2,14 +2,41 @@
 import AnimatedRoutes from './components/AnimatedRoutes';
 import NavBar from './components/NavBar';
 
-import './App.css';
+// Import dependencies
+import { useState } from 'react'
+
+// setup context
+import { AppContext } from './AppContext'
 
 function App() {
+  const[shiftSelected, setShiftSelected] = useState([])
+  const[profileSelected, setProfileSelected] = useState()
+  const[currentUser, setCurrentUser] = useState()
+  const[departmentSelected, setDepartmentSelected] = useState([])
+  const[employeeLog, setEmployeeLog] = useState([])
+  const[noteType, setNoteType] = useState()
+  const[attendanceLog, setAttendanceLog] = useState([])
+  const[loggedIn, setLoggedIn] = useState(false)
+
+
   return (
     <div className="App flex h-screen w-screen">
-    	<div className='text-3xl m-auto'>Hi from clkwrk main app</div>
+    	<AppContext.Provider value={
+        {
+          shiftSelected, setShiftSelected,
+          profileSelected, setProfileSelected,
+          currentUser, setCurrentUser,
+          departmentSelected, setDepartmentSelected,
+          employeeLog, setEmployeeLog,
+          noteType, setNoteType,
+          attendanceLog, setAttendanceLog,
+          loggedIn, setLoggedIn
+        }
+        
+      }> 
       <AnimatedRoutes />
       <NavBar />
+      </AppContext.Provider>
       
     </div>
   );
