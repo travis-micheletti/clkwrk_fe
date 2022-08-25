@@ -1,7 +1,7 @@
 // Home page - > displays Welcome to the logged in user, navigation and a graphic/quote for now?
 import { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { AppContext } from '../AppContext'
+import { AppContext } from '../../AppContext'
 
 const HomePage = () => {
 

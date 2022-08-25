@@ -1,9 +1,9 @@
 // Nav Bar - > displays on all pages from the home page and on 
 import { Link } from 'react-router-dom'
 import UserSettings from './UserSettings'
-import LoginButton from './Auth/LoginButton'
+import LoginButton from '../Auth/LoginButton'
 import { motion } from 'framer-motion'
-import { AppContext } from '../AppContext'
+import { AppContext } from '../../AppContext'
 import { useContext, useEffect, useState } from 'react'
 
 const NavBar = () => {

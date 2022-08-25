@@ -1,6 +1,6 @@
 // importing componenets
-import AnimatedRoutes from './components/AnimatedRoutes';
-import NavBar from './components/NavBar';
+import AnimatedRoutes from './components/Pages/AnimatedRoutes';
+import NavBar from './components/Navigation/NavBar';
 
 // Import dependencies
 import { useState } from 'react'
