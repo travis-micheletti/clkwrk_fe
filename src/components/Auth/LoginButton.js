@@ -1,16 +1,10 @@
+import { useAuth0 } from '@auth0/auth0-react'
 
 const LoginButton = () => {
+	const { loginWithRedirect } = useAuth0()
 
-	// function login () {
-	// 	axios.get('https://clkwrk-be.herokuapp.com/login')
-	// 		.then(response => {
-
-	// 		})
-	// }
-
-	return(
-		<a href='https://clkwrk-be.herokuapp.com/login'><button className='logButton'>login</button></a>
-	)
+	return <button className='logButton' onClick={() => loginWithRedirect()}>Log In</button>;
 }
+
 
 export default LoginButton
