@@ -1,6 +1,7 @@
 // dependencies for animating the route paths
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import LoggedIn from '../Auth/LoggedIn'
 
 // importing components
 import HomePage from './HomePage'
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
 				<Route path='/employees' element={<ViewEmployees />} />
 				<Route path='/welcome' element={<WelcomePage />} />
 				<Route path='/logged-out' element={<LoggedOut />} />
+				<Route path='/logged-in' element={<LoggedIn/>} />
 			</Routes>
 		</AnimatePresence>
 	)
