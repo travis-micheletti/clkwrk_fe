@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 
 const UserSettings = () => {
 	return (
-		<motion.div>
-			usersettings
+		<motion.div className='displayContainer'>
+			user settings
 		</motion.div>
 	)
 }

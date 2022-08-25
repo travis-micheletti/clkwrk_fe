@@ -8,10 +8,14 @@
 	}
 
 	.subContainer {
-		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl h-5/6 w-5/6 
+		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl h-to-fit w-to-fit 
 	}
 
 	.logButton {
 		@apply border fixed right-5 top-1 h-8
+	}
+
+	.employeePicture {
+		@apply rounded-full h-24
 	}
 }

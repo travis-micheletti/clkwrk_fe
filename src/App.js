@@ -17,6 +17,9 @@ function App() {
   const[noteType, setNoteType] = useState()
   const[attendanceLog, setAttendanceLog] = useState([])
   const[loggedIn, setLoggedIn] = useState(false)
+  const[addModal, setAddModal] = useState()
+  const [addModalClass, setAddModalClass] = useState()
+  const [axiosResults, setAxiosResults] = useState([])
 
 
   return (
@@ -30,7 +33,10 @@ function App() {
           employeeLog, setEmployeeLog,
           noteType, setNoteType,
           attendanceLog, setAttendanceLog,
-          loggedIn, setLoggedIn
+          loggedIn, setLoggedIn,
+          addModal, setAddModal,
+          addModalClass, setAddModalClass,
+          axiosResults, setAxiosResults
         }
         
       }> 

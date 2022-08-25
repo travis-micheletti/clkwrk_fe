@@ -16,8 +16,11 @@ module.exports = {
         'header-main': 'Crimson Pro',
       },
       height: {
-        'to-fit': '100%'
+        'to-fit': '90%'
       },
+      width: {
+        'to-fit': '90%'
+      }
     },
   },
   variants: {
