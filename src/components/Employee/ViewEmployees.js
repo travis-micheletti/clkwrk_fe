@@ -11,7 +11,7 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const [array, setArray] = useState([])
 
 	const [filterDepartment, setFilterDepartment] = useState()
-	const [filterShift, setFilterShift] = useState(['HR', 'FILLET', 'CANNERY', 'EGGHOUSE', 'H&G'])
+	const [filterShift, setFilterShift] = useState(['blue', 'green', 'yellow'])
 	const [laborCode, setLaborCode] = useState()
 	const [greenChecked, setGreenChecked] = useState(true)
 	const [blueChecked, setBlueChecked] = useState(true)
@@ -22,48 +22,68 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const [filletChecked, setFilletChecked] = useState(true)
 	const [hgChecked, setHgChecked] = useState(true)
 
+	const testArr = ['blue', 'green', 'yellow']
 	const {
 		axiosResults, setAxiosResults,
 		setAddModal, setAddModalClass
 	} 
 		= useContext(AppContext)
 
+function filterShiftResults(arr, fil) {
+	let filteredResults = []
+	for (let i = 0; i < arr.length; i++) {
+		console.log(arr[i])
+		for (let j = 0; j < fil.length; j++) {
+			console.log(arr[i].shift)
+			if (arr[i].shift === fil[j]) {
+				console.log(fil[j])
+				filteredResults.push(arr[i])
+			}
+		} 
+	} 
+	console.log(filteredResults)
+	setArray(filteredResults)
+}
+
 
 useEffect(() => {
 	axios.get('https://clkwrk-be.herokuapp.com/employees')
 		.then(response => {
 			setAxiosResults(response.data)
-			console.log('fetch successful')
+			console.log(axiosResults)
 		})
 		.catch(console.error)
 },[])
 
 useEffect(() => {
-	if (filterShift === ['HR', 'FILLET', 'CANNERY', 'EGGHOUSE', 'H&G']) {
+	console.log(array)
+	console.log(filterShift.length)
+	if (filterShift.length > 2) { 
+		console.log('hi from this is working!')
 		setArray(axiosResults)
+		
 	} else {
-		const shiftFilter = axiosResults.filter((item) => {
-			return item.shift
-		})
-		setArray(shiftFilter)
+		console.log('filterShift length is 2 or less!!')
+		filterShiftResults(array)
 	}
-}, [axiosResults, filterShift])
+}, [axiosResults, filterShift.length])
 
 function DisplayEmployees() {
-	return array.map((item, index) => {
-		return (
-			<div key={index}>
-				<ProfileResult 
-				firstName={item.firstName}
-				lastName={item.lastName}
-				department={item.department}
-				shift={item.shift}
-				picture={item.picture}
-				id={item._id}
-				/>
-			</div>
-		)
-	})
+		return array.map((item, index) => {
+			return (
+				<div key={index}>
+					<ProfileResult 
+					firstName={item.firstName}
+					lastName={item.lastName}
+					department={item.department}
+					shift={item.shift}
+					picture={item.picture}
+					id={item._id}
+					/>
+				</div>
+			)
+		})
+	
 }
 
 
@@ -82,40 +102,51 @@ function DisplayEmployees() {
             />
 		
         )
-		console.log('hi from add modal call')
+		// console.log('hi from add modal call')
     }
 
 	function handleGreenCheck() {
-		console.log('hi from handleGreenCheck')
 		setGreenChecked(!greenChecked)
-		console.log(filterShift)
+		if (greenChecked) {
+			const filterIndex = filterShift.findIndex(item => {
+				return item === 'green'
+			})
+			filterShift.splice(filterIndex, 1)
+			console.log(filterShift)
+			// return filterShiftResults(array, filterShift)
+		} else {
+			filterShift.splice(1, 0,'green')
+			console.log(filterShift)
+			// return filterShiftResults(array, filterShift)
+		}
+		
 	}
 	function handleBlueCheck() {
-		console.log('hi from handleBlueCheck')
+		// console.log('hi from handleBlueCheck')
 		setBlueChecked(!blueChecked)
 	}
 	function handleYellowCheck() {
-		console.log('hi from handleYellowCheck')
+		// console.log('hi from handleYellowCheck')
 		setYellowChecked(!yellowChecked)
 	}
 	function handleHrCheck() {
-		console.log('hi from handleHrCheck')
+		// console.log('hi from handleHrCheck')
 		setHrChecked(!hrChecked)
 	}
 	function handleEggHouseCheck() {
-		console.log('hi from handleEggHouseCheck')
+		// console.log('hi from handleEggHouseCheck')
 		setEggHouseChecked(!eggHouseChecked)
 	}
 	function handleCanneryCheck() {
-		console.log('hi from handleCanneryCheck')
+		// console.log('hi from handleCanneryCheck')
 		setCanneryChecked(!canneryChecked)
 	}
 	function handleFilletCheck() {
-		console.log('hi from handleFilletCheck')
+		// console.log('hi from handleFilletCheck')
 		setFilletChecked(!filletChecked)
 	}
 	function handleHgCheck() {
-		console.log('hi from handleHgCheck')
+		// console.log('hi from handleHgCheck')
 		setHgChecked(!hgChecked)
 	}
 
