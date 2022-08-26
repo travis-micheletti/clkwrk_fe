@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../AppContext'
-import { useContext, useEffect} from 'react'
+import { useContext} from 'react'
 
 
 const LoginButton = () => {

@@ -52,11 +52,10 @@ const AddNote = () => {
 	
 	console.log(profileSelected.employeeLog)
 	return (
-		<div>
-			<span>Add Note</span>
-			<div className='showModal'>
-				<form className='addNoteForm border h-80 w-80 display flex flex-col'>
-					<div className='flex'>
+		<motion.div className='modalContainer border'>
+			<span>New Note</span>
+				<form className='subContainer h-80 w-80 flex flex-col'>
+					<div className=''>
 						<label>
 							Note Type:
 							<select value={noteType} 
@@ -94,8 +93,7 @@ const AddNote = () => {
 						Submit
 					</div>
 				</form>
-			</div>
-		</div>
+		</motion.div>
 	)
 }
 	export default AddNote

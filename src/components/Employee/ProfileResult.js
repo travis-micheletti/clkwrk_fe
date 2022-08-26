@@ -12,6 +12,7 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 	}
 		= useContext(AppContext)
 
+
 	function handleProfileClick () {
 		axios.get(`https://clkwrk-be.herokuapp.com/employees/${id}`)
 			.then(response => {
@@ -24,15 +25,17 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 return redirectNow ? (
 	<Navigate replace to='/profile'/>
 )	: (
-	<div className='border h-40 w-40 profileContainer flex justify-center items-center' onClick={() => {
+	<div className='subContainer h-44 w-44 profileContainer flex  items-center' onClick={() => {
 		handleProfileClick()
 	}}>
-		<div className=''>
-			<div className=''>
-				<img src={picture} alt='employee selfie' className='employeePicture'></img>
+		<div className='profileContainer'>
+			<div>
+				<img src={picture} alt='employee selfie' className={shift === 'green' ? 'green' : (shift === 'blue' ? 'blue' : 'yellow')}></img>
 			</div>
 			<div>
-				<span className='profileName'>{lastName}, {firstName}</span>
+				<div className='profileName'>{lastName}, {firstName}</div>
+				<div className='text-center'>{department}</div>
+				
 			</div>
 		
 		

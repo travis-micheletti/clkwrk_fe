@@ -11,11 +11,31 @@
 		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl h-to-fit w-to-fit 
 	}
 
+	.modalContainer {
+		@apply h-5/6 w-5/6 flex flex-col justify-center items-center 
+	}
+
 	.logButton {
 		@apply border fixed right-5 top-1 h-8
 	}
 
 	.employeePicture {
 		@apply rounded-full h-24
+	}
+
+	.profileContainer {
+		@apply h-to-fit flex flex-col items-center justify-center text-sm w-40
+	}
+
+	.green {
+		@apply	border-4 border-green-500 rounded-full h-24
+	}
+
+	.yellow {
+		@apply border-4 border-yellow-300 rounded-full h-24
+	}
+
+	.blue {
+		@apply border-4 border-blue-600 rounded-full h-24
 	}
 }
