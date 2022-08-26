@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AppContext } from "../../AppContext"
 import { motion } from 'framer-motion'
 import axios from "axios"
@@ -6,7 +6,7 @@ import axios from "axios"
 
 const AddNote = () => {
 	
-	
+	const [newId, setNewId] = useState()
 	const  {
 		profileSelected,
 		noteType, setNoteType,
@@ -16,7 +16,8 @@ const AddNote = () => {
 		= useContext(AppContext)
 		const fullName = `${profileSelected.lastName}, ${profileSelected.firstName}`
 		console.log(fullName)
-	function addToNotes () {
+		
+	const addToNotes =  () => {
 		// if (noteContents.length < 1) {
 		// 	alert('Please fill out the comment box!')
 		// } else {
@@ -28,29 +29,27 @@ const AddNote = () => {
 				author: currentUser
 			}) 
 			.then((response) => {
-				console.log(response.data._id)
+				setNewId(response.data._id)
+				addToLog()
 			})
-				// .then(axios.get('https://clkwrk-be.herokuapp.com/notes')
-				// .then(response => {
-				// 	console.log(response.data)
-				// 	const newNote = response.data.splice(0,1)
-				// 	profileSelected.employeeLog.unshift(newNote)
-				// 	console.log(newNote[0])
-				// }))
-				// .catch(console.error)
+			.catch(console.error)
 			
 			
 		
 		console.log(`${profileSelected.employeeLog}`)
 		console.log(`${currentUser} is adding a ${noteType} note to ${profileSelected.firstName}'s employee log containing ${noteContents}`)
-		// console.log(profileSelected)
-		// console.log(noteType)
-		// console.log(noteContents)
-		// console.log(currentUser)
+	
 	}
-	// console.log(noteType)
-	// console.log(profileSelected.employeeLog)
-	// console.log(profileSelected._id)
+	const addToLog = () => {
+		axios.get(`https://clkwrk-be.herokuapp.com/notes/${newId}`)
+			.then(response => {
+				const newLog = `-------------------------------------- \n DATE/TIME: ${response.data.date} \n USER:${response.data.author} \n TYPE:${response.data.type} \n COMMENT:${response.data.comment} \n--------------------------------------`
+				console.log(newLog)
+				profileSelected.employeeLog.unshift(newLog)
+			})
+			.catch(console.error)
+	}
+	
 	console.log(profileSelected.employeeLog)
 	return (
 		<div>
