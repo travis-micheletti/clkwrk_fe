@@ -14,12 +14,13 @@ function App() {
   const[currentUser, setCurrentUser] = useState()
   const[departmentSelected, setDepartmentSelected] = useState([])
   const[employeeLog, setEmployeeLog] = useState([])
-  const[noteType, setNoteType] = useState()
+  const[noteType, setNoteType] = useState('attendance')
   const[attendanceLog, setAttendanceLog] = useState([])
   const[loggedIn, setLoggedIn] = useState(false)
   const[addModal, setAddModal] = useState()
   const [addModalClass, setAddModalClass] = useState()
   const [axiosResults, setAxiosResults] = useState([])
+  const [noteContents, setNoteContents] = useState()
 
 
   return (
@@ -36,7 +37,8 @@ function App() {
           loggedIn, setLoggedIn,
           addModal, setAddModal,
           addModalClass, setAddModalClass,
-          axiosResults, setAxiosResults
+          axiosResults, setAxiosResults,
+          noteContents, setNoteContents
         }
         
       }> 

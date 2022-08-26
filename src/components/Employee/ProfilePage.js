@@ -23,7 +23,8 @@ const ProfilePage = () => {
 			<div className='subContainer'>{profileSelected.firstName}
 			<EmployeeLog />
 			<AreaMap />
-			<button onClick={() => console.log('adding note!')}><AddNote /></button>
+			<button onClick={() => console.log('adding note!')}>add</button>
+			<AddNote />
 			</div>
 			
 		</motion.div>

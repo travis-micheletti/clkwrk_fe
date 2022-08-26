@@ -6,17 +6,12 @@ import { useContext, useEffect} from 'react'
 
 
 const LoginButton = () => {
-	let buttonClick = 0
+	
 	const {
 		loggedIn
 	}
 		= useContext(AppContext)
-	
-	// useEffect(() => {
-	// 	buttonClick += 1 
-	// 	setLoggedIn(!loggedIn)
-	// }, [buttonClick])
-	console.log(loggedIn)
+
 	return loggedIn ? (
 		<motion.button className='logButton'>
 			<Link to='/logged-out'>logout</Link>
@@ -27,11 +22,6 @@ const LoginButton = () => {
 		</motion.button>
 	)
 	
-	
-
-	// const { loginWithRedirect } = useAuth0()
-
-	// return <button className='logButton' onClick={() => loginWithRedirect()}>Log In</button>;
 }
 
 

@@ -24,7 +24,7 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 return redirectNow ? (
 	<Navigate replace to='/profile'/>
 )	: (
-	<div className='border h-48 w-auto profileContainer flex justify-center items-center' onClick={() => {
+	<div className='border h-40 w-40 profileContainer flex justify-center items-center' onClick={() => {
 		handleProfileClick()
 	}}>
 		<div className=''>
