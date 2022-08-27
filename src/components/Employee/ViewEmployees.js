@@ -8,7 +8,7 @@ import ProfileResult from './ProfileResult'
 import AddModal from '../AddModal'
 
 const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) => {
-	const [array, setArray] = useState([])
+	
 
 	const [filterDepartment, setFilterDepartment] = useState(['HR', 'EGG HOUSE', 'CANNERY', 'FILLET', 'H&G'])
 	const [filterShift] = useState(['blue', 'green', 'yellow'])
@@ -24,6 +24,7 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const [rollCallClass, setRollCallClass] = useState('hidden')
 
 	const {
+		array, setArray,
 		axiosResults, setAxiosResults,
 		setAddModal, setAddModalClass,
 		rollCallMode, setRollCallMode
@@ -237,7 +238,6 @@ function DisplayEmployees() {
 
 	function rollCallClick () {
 		setRollCallMode(!rollCallMode)
-		console.log(rollCallMode)
 		if (!rollCallMode) {
 			setRollCallClass('rollCall')
 		} else {
@@ -248,7 +248,6 @@ function DisplayEmployees() {
 	function cancelClick () {
 		setRollCallClass('hidden')
 		setRollCallMode(!rollCallMode)
-		// console.log ('cancelling')
 	}
 	
 

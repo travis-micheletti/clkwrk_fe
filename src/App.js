@@ -22,6 +22,7 @@ function App() {
   const [axiosResults, setAxiosResults] = useState([])
   const [noteContents, setNoteContents] = useState()
   const [rollCallMode, setRollCallMode] = useState(false)
+  const [array, setArray] = useState([])
 
 
   return (
@@ -40,7 +41,8 @@ function App() {
           addModalClass, setAddModalClass,
           axiosResults, setAxiosResults,
           noteContents, setNoteContents,
-          rollCallMode, setRollCallMode
+          rollCallMode, setRollCallMode,
+          array, setArray
         }
         
       }> 
