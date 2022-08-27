@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <div className="App flex h-screen w-screen">
+    <div className="App flex h-screen w-screen font-sora-main">
     	<AppContext.Provider value={
         {
           shiftSelected, setShiftSelected,

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import logo from '../../images/logo.svg'
 
 const WelcomePage = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
@@ -14,8 +15,8 @@ const WelcomePage = () => {
 	) : 
 	
 	(
-		<motion.div className='displayContainer'>
-			welcome
+		<motion.div className='welcomeContainer m-auto'>
+			<img className='h-to-fit' src={logo} alt='logo'></img>
 		</motion.div>
 	)
 }

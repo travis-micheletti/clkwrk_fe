@@ -12,7 +12,7 @@ const NavBar = () => {
 	
 	
 	return (
-		<motion.div className='fixed bg-slate-500 w-screen h-10 flex justify-evenly text-2xl'>
+		<motion.div className='fixed bg-pal-gray text-off-purple w-screen h-10 flex justify-evenly items-center text-2xl'>
 			<Link to='/home'>home</Link>
 			<Link to='/employees'>employees</Link>
 			<Link to ='map'>map</Link>

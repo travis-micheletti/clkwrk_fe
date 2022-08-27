@@ -7,13 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-pink': '#FFE3F1',
-        'dark-gray': '#303030',
-        'dark-teal': '#00C9C8'
+        'dark-purple': '#001185',
+        'pal-gray': '#ACA9BB',
+        'dark-teal': '#00C9C8',
+        'logo-purple': '#5865F2',
+        'off-purple': '#918CB7',
+        'pal-white': '#FAF7FF',
+        'pal-orange': '#FF6369',
+        'pal-gray': '#474554'
       },
       fontFamily: {
         'home-name': 'Amsterdam',
-        'header-main': 'Crimson Pro',
+        'sora-main': 'Sora',
       },
       height: {
         'to-fit': '90%'

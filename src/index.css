@@ -42,4 +42,10 @@
 	.rollCall {
 		@apply border-4 border-pink-400
 	}
+	.welcomeContainer {
+		@apply bg-off-purple w-screen h-to-fit border flex justify-center items-center
+	}
+	.mapContainer {
+		@apply h-to-fit w-to-fit
+	}
 }
