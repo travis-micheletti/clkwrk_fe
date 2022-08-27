@@ -38,4 +38,8 @@
 	.blue {
 		@apply border-4 border-blue-600 rounded-full h-24
 	}
+	
+	.rollCall {
+		@apply border-4 border-pink-400
+	}
 }

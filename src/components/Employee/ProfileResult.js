@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../AppContext'
 import { Navigate } from 'react-router-dom'
 import axios from 'axios'
@@ -7,12 +7,19 @@ import axios from 'axios'
 
 const ProfileResult = ({firstName, lastName, department, shift, picture, id}) => {
 	const [redirectNow, setRedirectNow] = useState(false)
+	const [rollCallBorder, setRollCallBorder] = useState(false)
+	
 	const {
-		profileSelected, setProfileSelected
+		profileSelected, setProfileSelected,
+		rollCallMode
 	}
 		= useContext(AppContext)
+	
+		useEffect(() => {
+			handleRollCallClick()
+	}, [])
 
-
+	
 	function handleProfileClick () {
 		axios.get(`https://clkwrk-be.herokuapp.com/employees/${id}`)
 			.then(response => {
@@ -22,15 +29,24 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 			})
 	}
 
+	function handleRollCallClick () {
+		// if(rollCallBorder) {
+		// 	console.log('cancelling')
+		// 	setRollCallBorder(!rollCallBorder)
+		// } else {
+		// 	setRollCallBorder(!rollCallBorder)
+		// }
+		setRollCallBorder(!rollCallBorder)
+		
+	}
+
 return redirectNow ? (
 	<Navigate replace to='/profile'/>
 )	: (
-	<div className='subContainer h-44 w-44 profileContainer flex  items-center' onClick={() => {
-		handleProfileClick()
-	}}>
+	<div className='subContainer h-44 w-44 profileContainer flex  items-center' onClick={() => !rollCallMode ? handleProfileClick() : handleRollCallClick()}>
 		<div className='profileContainer'>
 			<div>
-				<img src={picture} alt='employee selfie' className={shift === 'green' ? 'green' : (shift === 'blue' ? 'blue' : 'yellow')}></img>
+				<img src={!rollCallBorder ? picture : 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png'} alt='employee selfie' className={shift === 'green' ? 'green' : (shift === 'blue' ? 'blue' : 'yellow')}></img>
 			</div>
 			<div>
 				<div className='profileName'>{lastName}, {firstName}</div>

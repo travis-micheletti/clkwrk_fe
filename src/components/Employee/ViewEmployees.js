@@ -10,8 +10,8 @@ import AddModal from '../AddModal'
 const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) => {
 	const [array, setArray] = useState([])
 
-	const [filterDepartment, setFilterDepartment] = useState()
-	const [filterShift, setFilterShift] = useState(['blue', 'green', 'yellow'])
+	const [filterDepartment, setFilterDepartment] = useState(['HR', 'EGG HOUSE', 'CANNERY', 'FILLET', 'H&G'])
+	const [filterShift] = useState(['blue', 'green', 'yellow'])
 	const [laborCode, setLaborCode] = useState()
 	const [greenChecked, setGreenChecked] = useState(true)
 	const [blueChecked, setBlueChecked] = useState(true)
@@ -21,28 +21,41 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const [canneryChecked, setCanneryChecked] = useState(true)
 	const [filletChecked, setFilletChecked] = useState(true)
 	const [hgChecked, setHgChecked] = useState(true)
+	const [rollCallClass, setRollCallClass] = useState('hidden')
 
-	const testArr = ['blue', 'green', 'yellow']
 	const {
 		axiosResults, setAxiosResults,
-		setAddModal, setAddModalClass
+		setAddModal, setAddModalClass,
+		rollCallMode, setRollCallMode
 	} 
 		= useContext(AppContext)
 
 function filterShiftResults(arr, fil) {
+	console.log(fil)
+	// setArray(axiosResults)
 	let filteredResults = []
 	for (let i = 0; i < arr.length; i++) {
-		console.log(arr[i])
 		for (let j = 0; j < fil.length; j++) {
-			console.log(arr[i].shift)
 			if (arr[i].shift === fil[j]) {
-				console.log(fil[j])
 				filteredResults.push(arr[i])
+				console.log(filteredResults)
 			}
-		} 
+		} setArray(filteredResults)
 	} 
-	console.log(filteredResults)
-	setArray(filteredResults)
+}
+
+function filterDepartmentResults(arr, fil) {
+	console.log(fil)
+	setArray(axiosResults)
+	let filteredResults = []
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < fil.length; j++) {
+			if (arr[i].department === fil[j]) {
+				filteredResults.push(arr[i])
+				console.log(filteredResults)
+			}
+		} setArray(filteredResults)
+	} 
 }
 
 
@@ -50,23 +63,13 @@ useEffect(() => {
 	axios.get('https://clkwrk-be.herokuapp.com/employees')
 		.then(response => {
 			setAxiosResults(response.data)
-			console.log(axiosResults)
 		})
 		.catch(console.error)
 },[])
 
 useEffect(() => {
-	console.log(array)
-	console.log(filterShift.length)
-	if (filterShift.length > 2) { 
-		console.log('hi from this is working!')
-		setArray(axiosResults)
-		
-	} else {
-		console.log('filterShift length is 2 or less!!')
-		filterShiftResults(array)
-	}
-}, [axiosResults, filterShift.length])
+		setArray(axiosResults)	
+}, [axiosResults])
 
 function DisplayEmployees() {
 		return array.map((item, index) => {
@@ -113,45 +116,147 @@ function DisplayEmployees() {
 			})
 			filterShift.splice(filterIndex, 1)
 			console.log(filterShift)
-			// return filterShiftResults(array, filterShift)
+			return filterShiftResults(array, filterShift)
 		} else {
 			filterShift.splice(1, 0,'green')
-			console.log(filterShift)
-			// return filterShiftResults(array, filterShift)
+			console.log(filterShift.length)
+			filterShiftResults(axiosResults, filterShift)
 		}
 		
 	}
 	function handleBlueCheck() {
-		// console.log('hi from handleBlueCheck')
 		setBlueChecked(!blueChecked)
+		if (blueChecked) {
+			const filterIndex = filterShift.findIndex(item => {
+				return item === 'blue'
+			})
+			filterShift.splice(filterIndex, 1)
+			console.log(filterShift)
+			return filterShiftResults(array, filterShift)
+		} else {
+			filterShift.splice(0, 0, 'blue')
+			console.log(filterShift.length)
+			return filterShiftResults(axiosResults, filterShift)
+		}
 	}
 	function handleYellowCheck() {
 		// console.log('hi from handleYellowCheck')
 		setYellowChecked(!yellowChecked)
+		if (yellowChecked) {
+			const filterIndex = filterShift.findIndex(item => {
+				return item === 'yellow'
+			})
+			filterShift.splice(filterIndex, 1)
+			console.log(filterShift)
+			filterShiftResults(array, filterShift)
+		} else {
+			filterShift.push('yellow')
+			console.log(filterShift.length)
+			filterShiftResults(axiosResults, filterShift)
+		}
 	}
 	function handleHrCheck() {
-		// console.log('hi from handleHrCheck')
 		setHrChecked(!hrChecked)
+		if (hrChecked) {
+			const filterIndex = filterDepartment.findIndex(item => {
+				return item === 'HR'
+			})
+			filterDepartment.splice(filterIndex, 1)
+			console.log(filterDepartment)
+			filterDepartmentResults(array, filterDepartment)
+		} else {
+			filterDepartment.push('HR')
+			console.log(filterDepartment)
+			filterDepartmentResults(axiosResults, filterDepartment)
+		}
 	}
 	function handleEggHouseCheck() {
 		// console.log('hi from handleEggHouseCheck')
 		setEggHouseChecked(!eggHouseChecked)
+		if (eggHouseChecked) {
+			const filterIndex = filterDepartment.findIndex(item => {
+				return item === 'EGG HOUSE'
+			})
+			filterDepartment.splice(filterIndex, 1)
+			console.log(filterDepartment)
+			filterDepartmentResults(array, filterDepartment)
+		} else {
+			filterDepartment.push('EGG HOUSE')
+			console.log(filterDepartment)
+			filterDepartmentResults(axiosResults, filterDepartment)
+		}
 	}
 	function handleCanneryCheck() {
 		// console.log('hi from handleCanneryCheck')
 		setCanneryChecked(!canneryChecked)
+		if (canneryChecked) {
+			const filterIndex = filterDepartment.findIndex(item => {
+				return item === 'CANNERY'
+			})
+			filterDepartment.splice(filterIndex, 1)
+			console.log(filterDepartment)
+			filterDepartmentResults(array, filterDepartment)
+		} else {
+			filterDepartment.push('CANNERY')
+			console.log(filterDepartment)
+			filterDepartmentResults(axiosResults, filterDepartment)
+		}
 	}
 	function handleFilletCheck() {
 		// console.log('hi from handleFilletCheck')
 		setFilletChecked(!filletChecked)
+		if (filletChecked) {
+			const filterIndex = filterDepartment.findIndex(item => {
+				return item === 'FILLET'
+			})
+			filterDepartment.splice(filterIndex, 1)
+			console.log(filterDepartment)
+			filterDepartmentResults(array, filterDepartment)
+		} else {
+			filterDepartment.push('FILLET')
+			console.log(filterDepartment)
+			filterDepartmentResults(axiosResults, filterDepartment)
+		}
 	}
 	function handleHgCheck() {
 		// console.log('hi from handleHgCheck')
 		setHgChecked(!hgChecked)
+		if (hgChecked) {
+			const filterIndex = filterDepartment.findIndex(item => {
+				return item === 'H&G'
+			})
+			filterDepartment.splice(filterIndex, 1)
+			console.log(filterDepartment)
+			filterDepartmentResults(array, filterDepartment)
+		} else {
+			filterDepartment.push('H&G')
+			console.log(filterDepartment)
+			filterDepartmentResults(axiosResults, filterDepartment)
+		}
 	}
+
+	function rollCallClick () {
+		setRollCallMode(!rollCallMode)
+		console.log(rollCallMode)
+		if (!rollCallMode) {
+			setRollCallClass('rollCall')
+		} else {
+			setRollCallClass('hidden')
+		}
+	}
+
+	function cancelClick () {
+		setRollCallClass('hidden')
+		setRollCallMode(!rollCallMode)
+		// console.log ('cancelling')
+	}
+	
 
 	return (
 		<motion.div className='displayContainer'>
+			<button onClick={rollCallClick} className='flex'>Roll Call</button>
+			<div className={rollCallClass}>ROLL CALL MODE ACTIVE</div>
+			<div className={rollCallClass} onClick={cancelClick}>CANCEL ROLL CALL</div>
 			<div className='flex w-10/12 justify-evenly'>Shifts: 
 				<label>
 					Green
@@ -191,7 +296,7 @@ function DisplayEmployees() {
 			<div onClick={callAddModal} className='cursor-pointer'>
 				Add Employee
 			</div>
-			<div className='subContainer flex-row flex-wrap justify-evenly'>{DisplayEmployees()}</div>
+			<div className={'subContainer flex-row flex-wrap justify-evenly'}>{DisplayEmployees()}</div>
 			
 		</motion.div>
 	)
