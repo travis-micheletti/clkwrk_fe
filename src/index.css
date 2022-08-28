@@ -19,7 +19,7 @@
 		 @apply z-0
 	}
 	.navBar {
-		@apply absolute bg-pal-gray text-off-purple w-screen h-12 flex flex-row-reverse justify-between items-center p-3 text-4xl
+		@apply absolute bg-slate-800 shadow-md shadow-white text-off-purple w-screen h-12 flex flex-row-reverse justify-between items-center p-3 text-4xl
 	}
 
 	.employeePicture {
@@ -54,6 +54,9 @@
 	.navIconContainer {
 		@apply flex flex-wrap w-full justify-center space-x-8
 	}
+	.outerHomeContainer {
+		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-wb-yonder border-x-8 border-honeydew border-opacity-50 h-screen w-screen
+	}
 
 	.welcomeHeader {
 		@apply font-bold w-5/6 text-center text-7xl mb-20 -mt-30 drop-shadow-2xl text-pal-alt-purp bg-dark-purple rounded-full
@@ -68,6 +71,24 @@
 		@apply font-bold w-screen text-center text-7xl -mb-10 mt-10 drop-shadow-2xl text-pal-alt-purp bg-dark-purple rounded-full
 	}
 	.clockedIn {
-		@apply w-screen h-screen flex justify-end items-end
+		@apply w-screen h-screen flex justify-end items-end mb-10 z-10
+	}
+	.homeContainer {
+		@apply m-auto flex flex-col justify-center items-center rounded-2xl h-to-fit w-to-fit 
+	}
+	.accentLines {
+		@apply h-3/4 fixed -left-60 -top-80 z-0 
+	}
+	.homeArrow {
+		@apply h-1/2 
+	}
+	.accentLinesBottom {
+		@apply h-3/4 fixed -right-72 -bottom-96 z-0 
+	}
+	.morningContainer {
+		@apply h-screen 
+	}
+	.getStarted {
+		@apply z-0
 	}
 }

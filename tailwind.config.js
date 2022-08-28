@@ -17,7 +17,13 @@ module.exports = {
         'pal-gray': '#474554',
         'nat-purp': '#D7D0FF',
         'pal-cream': '#FEFEDF',
-        'pal-alt-purp': '#9A9AFF'
+        'pal-alt-purp': '#9A9AFF',
+        'deep-brown':'#31221F',
+        'bv-crayola': '#8367C7',
+        'middle-bp': '#8A7ABF',
+        'wb-yonder': '#9BA8C7',
+        'opal': '#A7C9C7',
+        'honeydew': '#F0FFF1'
       },
       fontFamily: {
         'home-name': 'Amsterdam',

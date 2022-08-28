@@ -2,6 +2,9 @@
 import { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AppContext } from '../../AppContext'
+import getStarted  from '../../images/getStarted.svg'
+import accentLines from '../../images/accentLines.svg'
+import arrow from '../../images/arrow.svg'
 
 const HomePage = () => {
 
@@ -17,9 +20,18 @@ const HomePage = () => {
 	},[])
 
 	return (
-		<motion.div className='displayContainer'>
-			<motion.div className='subContainer'>
-				<div className='clockedIn'>Current User: {currentUser}!</div>
+		<motion.div className='outerHomeContainer'>
+			
+			<motion.div className='homeContainer'>
+				
+				<div className=''><img className='accentLines' src={accentLines}/></div>
+				<div className='morningContainer'>
+					<div className=' h-screen flex'>
+						<img className='getStarted' src={getStarted}/>
+					</div>
+				</div>
+				<div className='clockedIn'>Logged in as: {currentUser}!</div>
+				<div className=''><img className='accentLinesBottom' src={accentLines}/></div>
 			</motion.div>
 		</motion.div>
 	)
