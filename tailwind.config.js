@@ -8,13 +8,16 @@ module.exports = {
     extend: {
       colors: {
         'dark-purple': '#001185',
-        'pal-gray': '#ACA9BB',
+        'other-gray': '#ACA9BB',
         'dark-teal': '#00C9C8',
         'logo-purple': '#5865F2',
         'off-purple': '#918CB7',
         'pal-white': '#FAF7FF',
         'pal-orange': '#FF6369',
-        'pal-gray': '#474554'
+        'pal-gray': '#474554',
+        'nat-purp': '#D7D0FF',
+        'pal-cream': '#FEFEDF',
+        'pal-alt-purp': '#9A9AFF'
       },
       fontFamily: {
         'home-name': 'Amsterdam',
@@ -24,8 +27,17 @@ module.exports = {
         'to-fit': '90%'
       },
       width: {
-        'to-fit': '90%'
-      }
+        'to-fit': '90%',
+        '100': '100%',
+        'over9k': '150%'
+      },
+      spacing: {
+        '17': '4.5rem',
+        '30': '7.2rem',
+      },
+      screens: {
+        'xs': {'min':'1px', 'max': '575px'}
+      },
     },
   },
   variants: {

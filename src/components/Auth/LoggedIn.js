@@ -10,12 +10,15 @@ const LoggedIn = () => {
 	setTimeout(() => setRedirectNow(true), 2000)
 
 	const {
-		loggedIn, setLoggedIn
+		loggedIn, setLoggedIn,
+		setHideNavBar
 	}
 		= useContext(AppContext)
 	
+	
 	useEffect(() => {
 		setLoggedIn(true)
+		setHideNavBar(true)
 	}, [])
 	console.log(loggedIn)
 

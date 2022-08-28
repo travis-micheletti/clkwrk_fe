@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../AppContext'
 import { useContext} from 'react'
+import { BsPersonXFill, BsFillPersonCheckFill} from 'react-icons/bs'
 
 
 const LoginButton = () => {
@@ -14,11 +15,11 @@ const LoginButton = () => {
 
 	return loggedIn ? (
 		<motion.button className='logButton'>
-			<Link to='/logged-out'>logout</Link>
+			<Link to='/logged-out'><BsFillPersonCheckFill/></Link>
 		</motion.button>
 	) : (
 		<motion.button className='logButton'>
-			<Link to='/logged-in'>login</Link>
+			<Link to='/logged-in'><BsPersonXFill/></Link>
 		</motion.button>
 	)
 	

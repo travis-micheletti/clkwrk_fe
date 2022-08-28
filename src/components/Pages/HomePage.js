@@ -6,18 +6,20 @@ import { AppContext } from '../../AppContext'
 const HomePage = () => {
 
 	const {
-		currentUser, setCurrentUser
+		currentUser, setCurrentUser,
+		setHideNavBar
 	}
 		= useContext(AppContext)
 
 	useEffect(() => {
+		setHideNavBar(false)
 		setCurrentUser('travvy wavvy!')
-	})
+	},[])
 
 	return (
 		<motion.div className='displayContainer'>
 			<motion.div className='subContainer'>
-				<div className=''>Welcome to the home screen, {currentUser}!</div>
+				<div className='clockedIn'>Current User: {currentUser}!</div>
 			</motion.div>
 		</motion.div>
 	)
