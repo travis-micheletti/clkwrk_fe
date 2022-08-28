@@ -23,12 +23,12 @@ const WelcomePage = () => {
 	(
 		<motion.div className='welcomeContainer'>
 			<div className='welcomeBorders'></div>
-			<h2 className='welcomeHeader'>clkwrk</h2>
-			<h6 className='welcomeSubHeader'>@clkwrkapp</h6>
+			<h2 className='welcomeHeader'>@clkwrkapp</h2>
+			<h6 className='welcomeSubHeader'>-liii</h6>
 			<div className=' h-screen w-screen flex justify-center items-center'>
-				<img className='xs:fixed xs:left-4' src={logo} alt='logo'></img>
+				<img className='xs:fixed xs:left-2' src={logo} alt='logo'></img>
 			</div>
-			<h2 className='welcomeMessage'>Welcome</h2>
+			<h2 className='welcomeMessage'>welcome to</h2>
 			<div className='welcomeBorders'></div>
 		</motion.div>
 	)

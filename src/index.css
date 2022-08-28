@@ -19,7 +19,7 @@
 		 @apply z-0
 	}
 	.navBar {
-		@apply absolute bg-slate-800 shadow-md shadow-white text-off-purple w-screen h-12 flex flex-row-reverse justify-between items-center p-3 text-4xl
+		@apply absolute bg-slate-800  text-off-purple w-screen h-12 flex flex-row-reverse justify-between items-center p-3 text-4xl
 	}
 
 	.employeePicture {
@@ -46,7 +46,7 @@
 		@apply border-4 border-pink-400
 	}
 	.welcomeContainer {
-		@apply bg-off-purple w-screen  h-screen flex flex-col-reverse justify-center items-center
+		@apply bg-welcome-bg  h-screen flex flex-col-reverse justify-center items-center  
 	}
 	.mapContainer {
 		@apply h-to-fit w-to-fit
@@ -55,23 +55,23 @@
 		@apply flex flex-wrap w-full justify-center space-x-8
 	}
 	.outerHomeContainer {
-		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-wb-yonder border-x-8 border-honeydew border-opacity-50 h-screen w-screen
+		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-8 border-pal-cream border-opacity-100 h-screen w-screen
 	}
 
 	.welcomeHeader {
-		@apply font-bold w-5/6 text-center text-7xl mb-20 -mt-30 drop-shadow-2xl text-pal-alt-purp bg-dark-purple rounded-full
+		@apply font-bold font-raleway w-5/6 text-center text-3xl mb-20 -mt-20 drop-shadow-2xl text-honeydew 
 	}
 	.welcomeBorders {
-		@apply w-screen bg-logo-purple h-10
+		@apply w-screen bg-transparent h-10 
 	}
 	.welcomeSubHeader {
 		@apply text-pal-cream text-2xl
 	}
 	.welcomeMessage {
-		@apply font-bold w-screen text-center text-7xl -mb-10 mt-10 drop-shadow-2xl text-pal-alt-purp bg-dark-purple rounded-full
+		@apply font-bold font-raleway w-screen text-center text-7xl -mb-10 mt-10 drop-shadow-2xl text-honeydew 
 	}
 	.clockedIn {
-		@apply w-screen h-screen flex justify-end items-end mb-10 z-10
+		@apply w-screen h-screen flex justify-start items-end mb-10 z-0 fixed
 	}
 	.homeContainer {
 		@apply m-auto flex flex-col justify-center items-center rounded-2xl h-to-fit w-to-fit 
@@ -83,12 +83,45 @@
 		@apply h-1/2 
 	}
 	.accentLinesBottom {
-		@apply h-3/4 fixed -right-72 -bottom-96 z-0 
+		@apply h-3/4 fixed -right-60 -bottom-96 z-0 
 	}
 	.morningContainer {
 		@apply h-screen 
 	}
 	.getStarted {
 		@apply z-0
+	}
+	.arrowContainer {
+		@apply xs:h-screen flex
+	}
+	.arrow {
+		@apply xs:fixed xs:left-14 z-10 -top-3
+	}
+	.homeTextContainer {
+		@apply font-raleway text-honeydew font-extrabold h-screen  text-5xl flex text-center justify-center items-center -mt-30
+	}
+	.homeText {
+		@apply  w-1/2
+	}
+	.tutorial {
+		@apply font-sora-main text-2xl font-bold text-honeydew
+	}
+	.tutorialList {
+		@apply list-disc list-inside border-y-4 border-y-nat-purp
+	}
+	.tutorialItem {
+		@apply border-b-2 p-4 border-nat-purp
+	}
+	.employeesContainer {
+		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen overflow-auto
+	}
+	.employeesHeader {
+		@apply h-1/6 mt-14 mb-20 flex justify-center  w-screen border-t-4 border-b-4 outline outline-4 outline-welcome-bg
+	}
+	.filterTab {
+		@apply border-4 border-welcome-bg rounded-lg outline outline-4 bg-pal-cream my-4 outline-offset-2 outline-honeydew px-3
+	}
+	.filterChecks {
+		@apply fixed bg-white w-screen flex justify-evenly text-lg outline-2 outline outline-welcome-bg
 	}
 }

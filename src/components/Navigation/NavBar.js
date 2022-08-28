@@ -12,9 +12,10 @@ import { IoSettings, IoExit } from 'react-icons/io5'
 
 
 const NavBar = () => {
-	const [showNav, setShowNav] = useState(false)
+	
 	const {
-		hideNavBar
+		hideNavBar, showNav,
+		setShowNav
 	}
 		= useContext(AppContext)
 

@@ -23,11 +23,14 @@ module.exports = {
         'middle-bp': '#8A7ABF',
         'wb-yonder': '#9BA8C7',
         'opal': '#A7C9C7',
-        'honeydew': '#F0FFF1'
+        'honeydew': '#F0FFF1',
+        'mid-brown': '#B38955',
+        'welcome-bg': '#474554'
       },
       fontFamily: {
         'home-name': 'Amsterdam',
         'sora-main': 'Sora',
+        'raleway': 'Raleway'
       },
       height: {
         'to-fit': '90%'

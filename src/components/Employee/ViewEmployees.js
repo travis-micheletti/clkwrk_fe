@@ -22,6 +22,8 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const [filletChecked, setFilletChecked] = useState(true)
 	const [hgChecked, setHgChecked] = useState(true)
 	const [rollCallClass, setRollCallClass] = useState('hidden')
+	const [shiftFilter, setShiftFilter] = useState(false)
+	const [departmentFilter, setDepartmentFilter] = useState(false)
 
 	const {
 		array, setArray,
@@ -58,6 +60,15 @@ function filterDepartmentResults(arr, fil) {
 		} setArray(filteredResults)
 	} 
 }
+
+// useEffect(() => {
+// 	setShiftFilter(!shiftFilter)
+// },[shiftFilter])
+// useEffect(() => {
+// 	setDepartmentFilter(!departmentFilter)
+// }, [departmentFilter])
+
+
 
 
 useEffect(() => {
@@ -249,53 +260,67 @@ function DisplayEmployees() {
 		setRollCallClass('hidden')
 		setRollCallMode(!rollCallMode)
 	}
+
+	const handleShiftButtonClick = () => {
+		console.log('shift button working')
+		setShiftFilter(!shiftFilter)
+	}
+	
+	const handleDepartmentButtonClick = () => {
+		console.log('department button working')
+		setDepartmentFilter(!departmentFilter)
+	}
 	
 
 	return (
-		<motion.div className='displayContainer'>
-			<button onClick={rollCallClick} className='flex'>Roll Call</button>
-			<div className={rollCallClass}>ROLL CALL MODE ACTIVE</div>
-			<div className={rollCallClass} onClick={cancelClick}>CANCEL ROLL CALL</div>
-			<div className='flex w-10/12 justify-evenly'>Shifts: 
+		<motion.div className='employeesContainer'>
+			
+			<div className='employeesHeader'>
+				<div className='flex w-10/12 justify-evenly'>
+					<span className='filterTab' onClick={handleShiftButtonClick}>shifts</span>
+				</div>
+				<div className='flex w-10/12 justify-evenly'>
+					<span className='filterTab' onClick={handleDepartmentButtonClick}>departments</span>
+			</div>
+			<div className={!shiftFilter ? 'hidden' : 'filterChecks mt-20'}>
 				<label>
-					Green
+					<span className='px-2'>green</span>
 					<input type='checkbox' checked={greenChecked} onChange={handleGreenCheck}></input>
 				</label>
 				<label>
-					Blue
+				<span className='px-2'>blue</span>
 					<input type='checkbox' checked={blueChecked} onChange={handleBlueCheck}></input>
 				</label>
 				<label>
-					Yellow
+				<span className='px-2'>yellow</span>
 					<input type='checkbox' checked={yellowChecked} onChange={handleYellowCheck}></input>
 				</label>
 			</div>
-			<div className='flex w-10/12 justify-evenly'>Departments: 
+			<div className={!departmentFilter ? 'hidden' : 'filterChecks mt-30'}>
 				<label>
-					HR
+				<span className='px-1'>hr</span>
 					<input type='checkbox' checked={hrChecked} onChange={handleHrCheck}></input>
 				</label>
 				<label>
-					Egg House
+				<span className='px-1'>egg house</span>
 					<input type='checkbox' checked={eggHouseChecked} onChange={handleEggHouseCheck}></input>
 				</label>
 				<label>
-					Cannery
+				<span className='px-1'>cannery</span>
 					<input type='checkbox' checked={canneryChecked} onChange={handleCanneryCheck}></input>
 				</label>
 				<label>
-					Fillet
+				<span className='px-1'>fillet</span>
 					<input type='checkbox' checked={filletChecked} onChange={handleFilletCheck}></input>
 				</label>
 				<label>
-					H&G
+				<span className='px-1'>h&g</span>
 					<input type='checkbox' checked={hgChecked} onChange={handleHgCheck}></input>
 				</label>
 			</div>
-			<div onClick={callAddModal} className='cursor-pointer'>
-				Add Employee
 			</div>
-			<div className={'subContainer flex-row flex-wrap justify-evenly'}>{DisplayEmployees()}</div>
+			
+			<div className='flex-row w-screen flex-wrap justify-evenly overflow-scroll border-t-4 outline-4 outline-welcome-bg outline mt-2 pt-4'>{DisplayEmployees()}</div>
 			
 		</motion.div>
 	)

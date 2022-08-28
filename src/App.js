@@ -24,6 +24,7 @@ function App() {
   const [rollCallMode, setRollCallMode] = useState(false)
   const [array, setArray] = useState([])
   const [hideNavBar, setHideNavBar] = useState(true)
+  const [showNav, setShowNav] = useState(false)
 
 
   return (
@@ -44,7 +45,8 @@ function App() {
           noteContents, setNoteContents,
           rollCallMode, setRollCallMode,
           array, setArray,
-          hideNavBar, setHideNavBar
+          hideNavBar, setHideNavBar,
+          showNav, setShowNav
         }
         
       }> 
