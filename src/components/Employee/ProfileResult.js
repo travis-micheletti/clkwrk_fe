@@ -67,8 +67,8 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 return redirectNow ? (
 	<Navigate replace to='/profile'/>
 )	: (
-	<div className='subContainer h-44 w-44 profileContainer flex  items-center' onClick={(e) => !rollCallMode ? handleProfileClick() : handleRollCallClick(e)}>
-		<div className='profileContainer'>
+	<div className='subContainer h-40 w-40 profileContainer flex  items-center' onClick={(e) => !rollCallMode ? handleProfileClick() : handleRollCallClick(e)}>
+		<div className='infoContainer'>
 			<div>
 				<img src={!rollCallBorder ? picture : 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png'} alt='employee selfie' className={shift === 'green' ? 'green' : (shift === 'blue' ? 'blue' : 'yellow')}></img>
 			</div>

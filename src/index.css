@@ -8,7 +8,7 @@
 	}
 
 	.subContainer {
-		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl h-to-fit w-to-fit 
+		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl 
 	}
 
 	.modalContainer {
@@ -25,21 +25,29 @@
 	.employeePicture {
 		@apply rounded-full h-24
 	}
-
 	.profileContainer {
-		@apply h-to-fit flex flex-col items-center justify-center text-sm w-40
+		@apply flex items-center justify-evenly flex-row m-4
+	}
+	.infoContainer {
+		@apply flex flex-row flex-wrap items-center justify-center text-sm w-40 my-2
+	}
+
+	.displayEmployeesContainer {
+		@apply flex flex-row sm:justify-evenly sm:w-1/2 w-screen flex-wrap justify-evenly 
+		overflow-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1
+		
 	}
 
 	.green {
-		@apply	border-4 border-green-500 rounded-full h-24
+		@apply	border-4 border-green-500 rounded-full h-22
 	}
 
 	.yellow {
-		@apply border-4 border-yellow-300 rounded-full h-24
+		@apply border-4 border-yellow-300 rounded-full h-22
 	}
 
 	.blue {
-		@apply border-4 border-blue-600 rounded-full h-24
+		@apply border-4 border-blue-600 rounded-full h-22
 	}
 	
 	.rollCall {
@@ -116,12 +124,12 @@
 		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen overflow-auto
 	}
 	.employeesHeader {
-		@apply h-1/6 mt-14 mb-20 flex justify-center  w-screen border-t-4 border-b-4 outline outline-4 outline-welcome-bg
+		@apply h-fit mt-16 flex w-screen border-y-4 outline outline-4 outline-welcome-bg
 	}
 	.filterTab {
 		@apply border-4 border-welcome-bg rounded-lg outline outline-4 bg-pal-cream my-4 outline-offset-2 outline-honeydew px-3
 	}
 	.filterChecks {
-		@apply fixed bg-white w-screen flex justify-evenly text-lg outline-2 outline outline-welcome-bg
+		@apply bg-white w-screen flex justify-evenly text-lg outline-2 outline outline-welcome-bg
 	}
 }

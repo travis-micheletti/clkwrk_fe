@@ -275,52 +275,52 @@ function DisplayEmployees() {
 	return (
 		<motion.div className='employeesContainer'>
 			
-			<div className='employeesHeader'>
+			<div className='employeesHeader mb-2'>
 				<div className='flex w-10/12 justify-evenly'>
 					<span className='filterTab' onClick={handleShiftButtonClick}>shifts</span>
 				</div>
 				<div className='flex w-10/12 justify-evenly'>
 					<span className='filterTab' onClick={handleDepartmentButtonClick}>departments</span>
+				</div>
 			</div>
-			<div className={!shiftFilter ? 'hidden' : 'filterChecks mt-20'}>
-				<label>
-					<span className='px-2'>green</span>
-					<input type='checkbox' checked={greenChecked} onChange={handleGreenCheck}></input>
-				</label>
-				<label>
-				<span className='px-2'>blue</span>
-					<input type='checkbox' checked={blueChecked} onChange={handleBlueCheck}></input>
-				</label>
-				<label>
-				<span className='px-2'>yellow</span>
-					<input type='checkbox' checked={yellowChecked} onChange={handleYellowCheck}></input>
-				</label>
-			</div>
-			<div className={!departmentFilter ? 'hidden' : 'filterChecks mt-30'}>
-				<label>
-				<span className='px-1'>hr</span>
-					<input type='checkbox' checked={hrChecked} onChange={handleHrCheck}></input>
-				</label>
-				<label>
-				<span className='px-1'>egg house</span>
-					<input type='checkbox' checked={eggHouseChecked} onChange={handleEggHouseCheck}></input>
-				</label>
-				<label>
-				<span className='px-1'>cannery</span>
-					<input type='checkbox' checked={canneryChecked} onChange={handleCanneryCheck}></input>
-				</label>
-				<label>
-				<span className='px-1'>fillet</span>
-					<input type='checkbox' checked={filletChecked} onChange={handleFilletCheck}></input>
-				</label>
-				<label>
-				<span className='px-1'>h&g</span>
-					<input type='checkbox' checked={hgChecked} onChange={handleHgCheck}></input>
-				</label>
-			</div>
-			</div>
+			<div className={!shiftFilter ? 'hidden' : 'filterChecks mt-2 mb-2'}>
+					<label>
+						<span className='px-2'>green</span>
+						<input type='checkbox' checked={greenChecked} onChange={handleGreenCheck}></input>
+					</label>
+					<label>
+					<span className='px-2'>blue</span>
+						<input type='checkbox' checked={blueChecked} onChange={handleBlueCheck}></input>
+					</label>
+					<label>
+					<span className='px-2'>yellow</span>
+						<input type='checkbox' checked={yellowChecked} onChange={handleYellowCheck}></input>
+					</label>
+				</div>
+				<div className={!departmentFilter ? 'hidden' : 'filterChecks mt-1 mb-2'}>
+					<label>
+					<span className='px-0.5'>hr</span>
+						<input type='checkbox' checked={hrChecked} onChange={handleHrCheck}></input>
+					</label>
+					<label>
+					<span className='px-0.5'>egg house</span>
+						<input type='checkbox' checked={eggHouseChecked} onChange={handleEggHouseCheck}></input>
+					</label>
+					<label>
+					<span className='px-0.5'>cannery</span>
+						<input type='checkbox' checked={canneryChecked} onChange={handleCanneryCheck}></input>
+					</label>
+					<label>
+					<span className='px-0.5'>fillet</span>
+						<input type='checkbox' checked={filletChecked} onChange={handleFilletCheck}></input>
+					</label>
+					<label>
+					<span className='px-0.5'>h&g</span>
+						<input type='checkbox' checked={hgChecked} onChange={handleHgCheck}></input>
+					</label>
+				</div>
 			
-			<div className='flex-row w-screen flex-wrap justify-evenly overflow-scroll border-t-4 outline-4 outline-welcome-bg outline mt-2 pt-4'>{DisplayEmployees()}</div>
+			<div className='displayEmployeesContainer'>{DisplayEmployees()}</div>
 			
 		</motion.div>
 	)
