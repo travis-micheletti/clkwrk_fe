@@ -28,10 +28,11 @@ const WelcomePage = () => {
 			</div>
 			<h2 className='welcomeHeader'>@clkwrkapp</h2>
 			<h6 className='welcomeSubHeader'>-liii</h6>
-			<div className='h-screen w-screen flex justify-center items-center'>
-				<img className='sm:h-1/2 sm:-mt-6' src='https://i.postimg.cc/N0XKpd1n/logof.png' alt='logo'></img>
+			<div className=' flex justify-center'>
+				<h2 className='welcomeMessage'>welcome to</h2>
+				<img className='xs:w-to-fit sm:h-3/4 sm:mt-30' src='https://i.postimg.cc/N0XKpd1n/logof.png' alt='logo'></img>
 			</div>
-			<h2 className='welcomeMessage'>welcome to</h2>
+			
 			
 				<img className='accentLinesBottom' alt='accent line' src={accentLines}/>
 			
