@@ -104,23 +104,23 @@ function DisplayEmployees() {
 }
 
 
-    function callAddModal() {
-        setTimeout(() => {
-            setAddModalClass('AddModal-container')
-        }, 1);
-        setAddModal(
-            <AddModal
-                firstName={firstName}
-                lastName={lastName}
-                department={department}
-                shift={shift}
-                picture={picture}
-				id={id}
-            />
+    // function callAddModal() {
+    //     setTimeout(() => {
+    //         setAddModalClass('AddModal-container')
+    //     }, 1);
+    //     setAddModal(
+    //         <AddModal
+    //             firstName={firstName}
+    //             lastName={lastName}
+    //             department={department}
+    //             shift={shift}
+    //             picture={picture}
+	// 			id={id}
+    //         />
 		
-        )
-		// console.log('hi from add modal call')
-    }
+    //     )
+	// 	// console.log('hi from add modal call')
+    // }
 
 	function handleGreenCheck() {
 		setGreenChecked(!greenChecked)

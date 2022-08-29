@@ -14,7 +14,7 @@ function App() {
   const[currentUser, setCurrentUser] = useState()
   const[departmentSelected, setDepartmentSelected] = useState([])
   const[employeeLog, setEmployeeLog] = useState([])
-  const[noteType, setNoteType] = useState('attendance')
+  const[noteType, setNoteType] = useState('default')
   const[attendanceLog, setAttendanceLog] = useState([])
   const[loggedIn, setLoggedIn] = useState(false)
   const[addModal, setAddModal] = useState()
@@ -25,6 +25,8 @@ function App() {
   const [array, setArray] = useState([])
   const [hideNavBar, setHideNavBar] = useState(true)
   const [showNav, setShowNav] = useState(false)
+  const [noteModalHidden, setNoteModalHidden] = useState(true)
+  const [logModalHidden, setLogModalHidden] = useState(true)
 
 
   return (
@@ -46,7 +48,9 @@ function App() {
           rollCallMode, setRollCallMode,
           array, setArray,
           hideNavBar, setHideNavBar,
-          showNav, setShowNav
+          showNav, setShowNav,
+          noteModalHidden, setNoteModalHidden,
+          logModalHidden, setLogModalHidden
         }
         
       }> 

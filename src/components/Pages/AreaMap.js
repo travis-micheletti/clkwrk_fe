@@ -26,12 +26,13 @@ const AreaMap = () => {
 	return (
 		<motion.div 
 			className={zoom ? 'mapContainer overflow-x-scroll' : 'mapContainer'}
-			initial={{x: '-100vw', opacity: .75}}
-            animate={{x: '0', opacity: 1}}
-            transition={{type: "spring", damping: 10, stiffness: 100}}
-            exit={{x: '100vw'}}
+			initial={{ opacity: 0}}
+            animate={{opacity: 1}}
+            // transition={{type: "spring", damping: 10, stiffness: 100}}
+            exit={{opacity: 0}}
 		>
-			<h1 className='font-raleway text-honeydew font-extrabold text-6xl flex text-center my-20 justify-center items-center'>Facility Map</h1>
+			<div className='fixed z-50 top-0 left-10'><img className='mapAccent' alt='accent line' src={accentLines}/></div>
+			<h1 className='font-raleway text-honeydew font-extrabold text-6xl flex text-center my-20 justify-center items-center'>facility map</h1>
 			<motion.div
 				className='mapFrame'
 				animate={{ scale: zoom ? 2.5 : 1}}

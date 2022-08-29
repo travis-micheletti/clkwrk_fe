@@ -10,7 +10,8 @@ const HomePage = () => {
 
 	const {
 		currentUser, setCurrentUser,
-		setHideNavBar, showNav
+		setHideNavBar, showNav,
+		setShowNav
 	}
 		= useContext(AppContext)
 
@@ -19,14 +20,12 @@ const HomePage = () => {
 	useEffect(() => {
 		setHideNavBar(false)
 		setCurrentUser('travvy wavvy!')
+		setHideArrow(false)
+		setShowNav(false)
 	},[])
 
 	useEffect(() => {
-		if (hideArrow === true) {
-			setHideArrow(false)
-		} else {
-			setHideArrow(true)
-		}
+	setHideArrow(!showNav)
 		
 	},[showNav])
 

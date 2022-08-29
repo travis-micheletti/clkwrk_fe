@@ -12,7 +12,16 @@
 	}
 
 	.modalContainer {
-		@apply h-5/6 w-5/6 flex flex-col justify-center items-center 
+		@apply h-full w-screen flex flex-col justify-center items-center z-10
+	}
+	.modalArea {
+		@apply h-3/5 w-screen fixed flex justify-center
+	}
+	.modalContents {
+		@apply flex flex-col border-4 rounded-2xl items-center w-5/6 h-3/5 bg-bv-crayola justify-around
+	}
+	.modalItem {
+		@apply border-pal-orange bg-welcome-bg text-pal-cream border-4
 	}
 
 	.logButton {
@@ -34,7 +43,7 @@
 
 	.displayEmployeesContainer {
 		@apply flex flex-row sm:justify-evenly sm:w-1/2 w-screen flex-wrap justify-evenly 
-		overflow-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
+		overflow-y-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
 		
 	}
 
@@ -134,7 +143,7 @@
 		@apply bg-white w-fit flex justify-evenly text-lg outline-2 outline outline-welcome-bg m-2
 	}
 	.profilePageContainer {
-		@apply m-auto flex flex-col justify-center items-center bg-off-purple h-screen w-screen
+		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen
 	}
 	.zoomed {
 		/* @apply scale-150  mt-40 xs:scale-300 overflow-x-scroll  outline outline-4 justify-self-center */
@@ -144,5 +153,32 @@
 	}
 	.mapFrame {
 		@apply flex justify-center xs:-mt-40 sm:-mt-30
+	}
+	.profilePictures {
+		@apply h-1/3 rounded-full outline outline-8 outline-off-purple self-center mb-10
+	}
+	.profileHeader {
+		@apply text-3xl text-center p-4 mb-10 w-screen bg-pal-cream text-bv-crayola
+	}
+	.profileInfo {
+		@apply flex flex-col items-center h-3/4 w-to-fit
+	}
+	.textInfo {
+		@apply bg-white w-screen text-center outline outline-2 outline-welcome-bg
+	}
+	.textItem {
+		@apply outline outline-1 p-2 text-bv-crayola  flex justify-between
+	}
+	.settingsContainer {
+		@apply m-auto  text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-opacity-100 h-screen w-screen
+	}
+	.settings {
+		@apply m-auto h-1/2 w-screen flex-col justify-center items-start
+	}
+	.settingsHeader {
+		@apply text-5xl font-raleway text-honeydew font-bold border-y-4 w-screen text-center bg-bv-crayola
+	}
+	.setting {
+		@apply border text-center h-1/3 flex justify-center items-center text-2xl text-honeydew bg-welcome-bg my-4
 	}
 }
