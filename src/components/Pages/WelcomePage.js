@@ -9,7 +9,7 @@ import { useContext } from 'react'
 
 const WelcomePage = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
-	// setTimeout(() => setRedirectNow(true), 2000)
+	setTimeout(() => setRedirectNow(true), 2000)
 	const {
 		setHideNavBar, setShowNav
 	}
