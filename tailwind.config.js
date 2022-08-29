@@ -50,6 +50,9 @@ module.exports = {
       screens: {
         'xs': {'min':'1px', 'max': '575px'}
       },
+      scale: {
+        '300': '3'
+      }
     },
   },
   variants: {

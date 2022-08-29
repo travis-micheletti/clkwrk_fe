@@ -10,10 +10,11 @@ const WelcomePage = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
 	setTimeout(() => setRedirectNow(true), 2000)
 	const {
-		setHideNavBar
+		setHideNavBar, setShowNav
 	}
 		= useContext(AppContext)
 	setHideNavBar(true)
+	setShowNav(false)
 
 	return redirectNow ? (
 		
