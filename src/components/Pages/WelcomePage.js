@@ -3,19 +3,19 @@ import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import logo from '../../images/logo.svg'
+import accentLines from '../../images/accentLines.svg'
 import { AppContext } from '../../AppContext'
 import { useContext } from 'react'
 
 const WelcomePage = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
-	setTimeout(() => setRedirectNow(true), 2000)
+	// setTimeout(() => setRedirectNow(true), 2000)
 	const {
 		setHideNavBar, setShowNav
 	}
 		= useContext(AppContext)
 	setHideNavBar(true)
 	setShowNav(false)
-
 	return redirectNow ? (
 		
 		<Navigate replace to='/home'/>
@@ -23,14 +23,18 @@ const WelcomePage = () => {
 	
 	(
 		<motion.div className='welcomeContainer'>
-			<div className='welcomeBorders'></div>
+			<div className=''>
+					<img className='accentLines' alt='accent line'  src={accentLines}/>
+			</div>
 			<h2 className='welcomeHeader'>@clkwrkapp</h2>
 			<h6 className='welcomeSubHeader'>-liii</h6>
-			<div className=' h-screen w-screen flex justify-center items-center'>
-				<img className='xs:fixed xs:left-2' src={logo} alt='logo'></img>
+			<div className='h-screen w-screen flex justify-center items-center'>
+				<img className='sm:h-1/2 sm:-mt-6' src='https://i.postimg.cc/N0XKpd1n/logof.png' alt='logo'></img>
 			</div>
 			<h2 className='welcomeMessage'>welcome to</h2>
-			<div className='welcomeBorders'></div>
+			
+				<img className='accentLinesBottom' alt='accent line' src={accentLines}/>
+			
 		</motion.div>
 	)
 }

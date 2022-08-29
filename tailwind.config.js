@@ -48,7 +48,8 @@ module.exports = {
         '31': '7.5rem'
       },
       screens: {
-        'xs': {'min':'1px', 'max': '575px'}
+        'xs': {'min':'1px', 'max': '575px'},
+        'tabs': {'min': '576px', 'max': '1300px'}
       },
       scale: {
         '300': '3'

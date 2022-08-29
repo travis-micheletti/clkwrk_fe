@@ -52,7 +52,7 @@
 	
 	
 	.welcomeContainer {
-		@apply bg-welcome-bg  h-screen flex flex-col-reverse justify-center items-center  
+		@apply bg-bv-crayola h-screen flex flex-col-reverse justify-center items-center  
 	}
 	.mapContainer {
 		@apply  border-black border-4 flex bg-bv-crayola justify-center flex-wrap items-center flex-row overflow-hidden
@@ -68,16 +68,14 @@
 	}
 
 	.welcomeHeader {
-		@apply font-bold font-raleway w-5/6 text-center text-3xl mb-20 -mt-20 drop-shadow-2xl text-honeydew 
+		@apply font-bold fixed xs:bottom-20 xs:left-44 bottom-5 font-raleway w-5/6 text-center xs:text-lg text-3xl drop-shadow-2xl text-honeydew 
 	}
-	.welcomeBorders {
-		@apply w-screen bg-transparent h-10 
-	}
+	
 	.welcomeSubHeader {
-		@apply text-pal-cream text-2xl
+		@apply text-pal-cream text-sm fixed bottom-1 xs:right-5 
 	}
 	.welcomeMessage {
-		@apply font-bold font-raleway w-screen text-center text-7xl -mb-10 mt-10 drop-shadow-2xl text-honeydew 
+		@apply font-bold font-raleway w-screen text-center text-7xl top-20 xs:top-60 xs:text-5xl drop-shadow-2xl text-honeydew fixed bg-welcome-bg
 	}
 	.clockedIn {
 		@apply w-screen h-screen flex justify-start items-end mb-10 z-0 fixed
@@ -86,13 +84,13 @@
 		@apply m-auto flex flex-col justify-center items-center rounded-2xl h-to-fit w-to-fit 
 	}
 	.accentLines {
-		@apply h-3/4 fixed -left-60 -top-80 z-0 
+		@apply h-3/4 fixed -left-60 -top-80 z-0 tabs:h-1/2
 	}
 	.homeArrow {
 		@apply h-1/2 
 	}
 	.accentLinesBottom {
-		@apply h-3/4 fixed -right-60 -bottom-96 z-0 
+		@apply h-3/4 fixed -right-60 -bottom-96 z-0 tabs:h-1/2
 	}
 	.morningContainer {
 		@apply h-screen 
