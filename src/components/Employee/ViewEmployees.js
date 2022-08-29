@@ -29,7 +29,8 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 		array, setArray,
 		axiosResults, setAxiosResults,
 		setAddModal, setAddModalClass,
-		rollCallMode, setRollCallMode
+		rollCallMode, setRollCallMode,
+		setHideNavBar
 	} 
 		= useContext(AppContext)
 
@@ -77,6 +78,7 @@ useEffect(() => {
 			setAxiosResults(response.data)
 		})
 		.catch(console.error)
+	setHideNavBar(false)
 },[])
 
 useEffect(() => {
@@ -250,7 +252,7 @@ function DisplayEmployees() {
 	function rollCallClick () {
 		setRollCallMode(!rollCallMode)
 		if (!rollCallMode) {
-			setRollCallClass('rollCall')
+			setRollCallClass('rollCallActive')
 		} else {
 			setRollCallClass('hidden')
 		}
@@ -275,14 +277,22 @@ function DisplayEmployees() {
 	return (
 		<motion.div className='employeesContainer'>
 			
-			<div className='employeesHeader mb-2'>
+			<div className='employeesHeader mb-2 flex'>
 				<div className='flex w-10/12 justify-evenly'>
 					<span className='filterTab' onClick={handleShiftButtonClick}>shifts</span>
 				</div>
 				<div className='flex w-10/12 justify-evenly'>
 					<span className='filterTab' onClick={handleDepartmentButtonClick}>departments</span>
 				</div>
+				<div className='flex w-10/12 justify-evenly'>
+					<button onClick={rollCallClick} className='filterTab'>roll call</button>
+				</div>
+
+			
+			
 			</div>
+			<div className={rollCallClass}>*roll call active*</div>
+			<div className={rollCallClass} onClick={cancelClick}>cancel</div>
 			<div className={!shiftFilter ? 'hidden' : 'filterChecks mt-2 mb-2'}>
 					<label>
 						<span className='px-2'>green</span>

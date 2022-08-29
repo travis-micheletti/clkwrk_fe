@@ -8,7 +8,7 @@
 	}
 
 	.subContainer {
-		@apply m-auto flex flex-col justify-center items-center border-purple-300 border-8 rounded-2xl 
+		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-8 border-pal-cream border-opacity-100 h-screen w-screen
 	}
 
 	.modalContainer {
@@ -26,7 +26,7 @@
 		@apply rounded-full h-24
 	}
 	.profileContainer {
-		@apply flex items-center justify-evenly flex-row m-4
+		@apply flex items-center justify-evenly flex-row m-4 shadow-2xl shadow-wb-yonder outline drop-shadow-2xl ring-8 ring-welcome-bg rounded-lg bg-off-purple
 	}
 	.infoContainer {
 		@apply flex flex-row flex-wrap items-center justify-center text-sm w-40 my-2
@@ -34,7 +34,7 @@
 
 	.displayEmployeesContainer {
 		@apply flex flex-row sm:justify-evenly sm:w-1/2 w-screen flex-wrap justify-evenly 
-		overflow-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1
+		overflow-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
 		
 	}
 
@@ -50,9 +50,7 @@
 		@apply border-4 border-blue-600 rounded-full h-22
 	}
 	
-	.rollCall {
-		@apply border-4 border-pink-400
-	}
+	
 	.welcomeContainer {
 		@apply bg-welcome-bg  h-screen flex flex-col-reverse justify-center items-center  
 	}
@@ -60,7 +58,7 @@
 		@apply h-to-fit w-to-fit
 	}
 	.navIconContainer {
-		@apply flex flex-wrap w-full justify-center space-x-8
+		@apply flex flex-wrap w-full justify-center space-x-8 sm:justify-evenly
 	}
 	.outerHomeContainer {
 		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-8 border-pal-cream border-opacity-100 h-screen w-screen
@@ -131,5 +129,11 @@
 	}
 	.filterChecks {
 		@apply bg-white w-screen flex justify-evenly text-lg outline-2 outline outline-welcome-bg
+	}
+	.rollCallActive {
+		@apply bg-white w-fit flex justify-evenly text-lg outline-2 outline outline-welcome-bg m-2
+	}
+	.profilePageContainer {
+		@apply m-auto flex flex-col justify-center items-center bg-off-purple h-screen w-screen
 	}
 }

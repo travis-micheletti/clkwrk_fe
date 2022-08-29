@@ -26,24 +26,26 @@ const NavBar = () => {
 	return !hideNavBar ? (
 		<motion.div className='navBar'>
 			<motion.div>
-				{showNav ? <IoExit className='cursor-pointer' onClick={handleShowNavClick}/> : <GiHamburgerMenu className='cursor-pointer' onClick={handleShowNavClick}/>}
+				{showNav ? 
+				<IoExit className='cursor-pointer' onClick={handleShowNavClick}/> : <GiHamburgerMenu className='cursor-pointer' onClick={handleShowNavClick}/>}
+				<span className='fixed text-white text-xs right-5 top-8 sm:hidden'>{!showNav ? 'nav' : ''}</span>
 			</motion.div>
 			<motion.div className={showNav ? 'navIconContainer' : 'hidden'}>
 				<motion.div className='justify-center items-center'>
 					<Link to='/home'><FaHome/></Link>
-					<span className='fixed text-white text-xs left-27 top-8 lg:hidden'>home</span>
+					<span className='fixed text-white text-xs left-27 top-8 sm:hidden'>home</span>
 				</motion.div>
 				<motion.div className='justify-center items-center'>
 					<Link to='/employees'><BsFillPeopleFill /></Link>
-					<span className='fixed text-white text-xs -ml-3 top-8 lg:hidden'>employees</span>
+					<span className='fixed text-white text-xs -ml-3 top-8 sm:hidden'>employees</span>
 				</motion.div>
 				<motion.div>
 					<Link to ='map'><FaMapMarkerAlt/></Link>
-					<span className='fixed text-white text-xs ml-1 top-8 lg:hidden'>map</span>
+					<span className='fixed text-white text-xs ml-1 top-8 sm:hidden'>map</span>
 				</motion.div>
 				<motion.div>
 					<Link to='/settings'><IoSettings/></Link>
-					<span className='fixed text-white text-xs -ml-2 top-8 lg:hidden'>settings</span>
+					<span className='fixed text-white text-xs -ml-2 top-8 sm:hidden'>settings</span>
 				</motion.div>
 			</motion.div>
 				

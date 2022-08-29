@@ -16,10 +16,12 @@ const LoginButton = () => {
 	return loggedIn ? (
 		<motion.button className='logButton'>
 			<Link to='/logged-out'><BsFillPersonCheckFill/></Link>
+			<span className='fixed text-white text-xs left-2 top-8 sm:hidden'>login</span>
 		</motion.button>
 	) : (
 		<motion.button className='logButton'>
 			<Link to='/logged-in'><BsPersonXFill/></Link>
+			<span className='fixed text-white text-xs left-2 top-8 sm:hidden'>logout</span>
 		</motion.button>
 	)
 	
