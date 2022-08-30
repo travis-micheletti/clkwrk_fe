@@ -3,7 +3,7 @@ import { AppContext } from '../../AppContext'
 import { Navigate } from 'react-router-dom'
 import axios from 'axios'
 
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const ProfileResult = ({firstName, lastName, department, shift, picture, id}) => {
 	
@@ -67,7 +67,13 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 return redirectNow ? (
 	<Navigate replace to='/profile'/>
 )	: (
-	<div className=' h-40 w-40 profileContainer flex  items-center' onClick={(e) => !rollCallMode ? handleProfileClick() : handleRollCallClick(e)}>
+	<motion.div 
+	className=' h-40 w-40 profileContainer flex  items-center' 
+	onClick={(e) => !rollCallMode ? handleProfileClick() : handleRollCallClick(e)}
+			initial={{ opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+	>
 		<div className='infoContainer'>
 			<div>
 				<img src={!rollCallBorder ? picture : 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Eo_circle_purple_white_checkmark.svg/2048px-Eo_circle_purple_white_checkmark.svg.png'} alt='employee selfie' className={shift === 'green' ? 'green' : (shift === 'blue' ? 'blue' : 'yellow')}></img>
@@ -81,7 +87,7 @@ return redirectNow ? (
 		
 		</div>
 		
-	</div>
+	</motion.div>
 )
 }
 

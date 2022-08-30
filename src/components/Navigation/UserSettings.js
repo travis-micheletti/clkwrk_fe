@@ -26,19 +26,23 @@ const UserSettings = () => {
 	}
 
 	return (
-		<motion.div className='settingsContainer'>
-			<div className='settings'>
-				<h1 className='settingsHeader'>user settings</h1>
-				<div className='h-full m-10'>
-						<div className='setting'><button className='cursor-pointer' onClick={handleAddEmployee}>add employee</button></div>
-						<div className='setting'>setting 2</div>
-						<div className='setting'>setting 3</div>
+		<motion.div 
+			className='settingsContainer'
+			initial={{ opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}>
+				<div className='settings'>
+					<h1 className='settingsHeader'>user settings</h1>
+					<div className='h-full m-10'>
+							<div className='setting'><button className='cursor-pointer' onClick={handleAddEmployee}>add employee</button></div>
+							<div className='setting'>setting 2</div>
+							<div className='setting'>setting 3</div>
+					</div>
 				</div>
-			</div>
 
-			<div className={employeeModalHidden ? 'hidden' : 'employeeModalArea'}>
-				<AddEmployee />
-			</div>					
+				<div className={employeeModalHidden ? 'hidden' : 'employeeModalArea'}>
+					<AddEmployee />
+				</div>					
 		</motion.div>
 	)
 }

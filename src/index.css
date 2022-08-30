@@ -52,7 +52,7 @@
 
 	.displayEmployeesContainer {
 		@apply flex flex-row sm:justify-evenly sm:w-1/2 w-screen flex-wrap justify-evenly 
-		overflow-y-scroll border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
+		 border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
 		
 	}
 
@@ -140,7 +140,7 @@
 		@apply border-b-2 p-4 border-nat-purp
 	}
 	.employeesContainer {
-		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen overflow-auto
+		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen 
 	}
 	.employeesHeader {
 		@apply h-fit mt-16 flex w-screen border-y-4 outline outline-4 outline-welcome-bg
@@ -156,9 +156,6 @@
 	}
 	.profilePageContainer {
 		@apply m-auto flex flex-col justify-center items-center bg-bv-crayola h-screen w-screen
-	}
-	.zoomed {
-		/* @apply scale-150  mt-40 xs:scale-300 overflow-x-scroll  outline outline-4 justify-self-center */
 	}
 	.mapAccent {
 		@apply xs:h-3/4 sm:h-1/2 fixed -right-40 -bottom-60 -z-10

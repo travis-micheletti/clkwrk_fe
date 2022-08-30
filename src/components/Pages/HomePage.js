@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { AppContext } from '../../AppContext'
 import accentLines from '../../images/accentLines.svg'
 import arrow from '../../images/arrow.svg'
-import favicon from '../../images/logo.svg'
+
 
 const HomePage = () => {
 
@@ -19,7 +19,7 @@ const HomePage = () => {
 
 	useEffect(() => {
 		setHideNavBar(false)
-		setCurrentUser('travvy wavvy!')
+		setCurrentUser('current user')
 		setHideArrow(false)
 		setShowNav(false)
 	},[])
@@ -30,9 +30,19 @@ const HomePage = () => {
 	},[showNav])
 
 	return (
-		<motion.div className='outerHomeContainer'>
+		<motion.div 
+			initial={{ opacity: 0}}
+				animate={{opacity: 1}}
+				exit={{opacity: 0}}
+				className='outerHomeContainer'
+		>
 			
-			<motion.div className='homeContainer'>
+			<motion.div 
+				className='homeContainer'
+				initial={{ opacity: 0}}
+				animate={{opacity: 1}}
+				exit={{opacity: 0}}
+			>
 				<div className='xs:hidden'>
 					<img className='accentLines' alt='accent line'  src={accentLines}/>
 				</div>
@@ -48,6 +58,7 @@ const HomePage = () => {
 				</div>
 				<div className={!hideArrow ? 'tutorial' : 'hidden'}>
 					<ul className='tutorialList'>
+						
 						<li className='tutorialItem'>home - navigate back to this screen</li>
 						<li className='tutorialItem'>employees - see all employees</li>
 						<li className='tutorialItem'>map - pull up the facility map</li>

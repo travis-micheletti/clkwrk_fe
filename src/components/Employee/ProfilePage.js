@@ -39,7 +39,11 @@ useEffect(() => {
 
 
 	return (
-		<motion.div className=''>
+		<motion.div 
+			initial={{ opacity: 0}}
+			animate={{opacity: 1}}
+			exit={{opacity: 0}}
+			>
 			<div className='profilePageContainer'>
 				<div className='profileInfo '>
 					<div className='profileHeader outline-welcome-bg outline outline-4 shadow-2xl'>

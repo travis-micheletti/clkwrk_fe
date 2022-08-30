@@ -22,7 +22,12 @@ const WelcomePage = () => {
 	) : 
 	
 	(
-		<motion.div className='welcomeContainer'>
+		<motion.div 
+			initial={{ opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+			className='welcomeContainer'
+		>
 			<div className=''>
 					<img className='accentLines' alt='accent line'  src={accentLines}/>
 			</div>

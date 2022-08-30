@@ -28,7 +28,6 @@ const AreaMap = () => {
 			className={zoom ? 'mapContainer overflow-x-scroll' : 'mapContainer'}
 			initial={{ opacity: 0}}
             animate={{opacity: 1}}
-            // transition={{type: "spring", damping: 10, stiffness: 100}}
             exit={{opacity: 0}}
 		>
 			<div className='fixed z-50 top-0 left-10'><img className='mapAccent' alt='accent line' src={accentLines}/></div>
@@ -36,7 +35,6 @@ const AreaMap = () => {
 			<motion.div
 				className='mapFrame'
 				animate={{ scale: zoom ? 2.5 : 1}}
-				transition={{type: "spring", damping: 10, stiffness: 100}}
 				onClick={handleZoom}
 			>
 				
@@ -45,7 +43,6 @@ const AreaMap = () => {
 						className='map overflow-scroll'
 						alt='facility map' 
 						onClick={handleZoom}
-						transition={{type: "spring", damping: 25, stiffness: 120}}
 					/>
 				
 				

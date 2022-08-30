@@ -67,7 +67,7 @@ const AddEmployee = () => {
 	}
 	
 	return (
-		<motion.div 
+		<div 
 			className={employeeModalHidden ? 'hidden' : 'employeeModalContainer border'}
 
 		>	<div>
@@ -199,7 +199,7 @@ const AddEmployee = () => {
 					</div>
 					
 				</form>
-		</motion.div>
+		</div>
 	)
 }
 

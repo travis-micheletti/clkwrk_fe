@@ -272,10 +272,30 @@ function DisplayEmployees() {
 		console.log('department button working')
 		setDepartmentFilter(!departmentFilter)
 	}
-	
+	const dropIn = {
+		hidden: {
+			x: '100vw',
+			opacity: 0,
+		},
+		visible: {
+			x: '0',
+			opacity: 1,
+			transition: {
+				duration: 0.1,
+				type: 'spring',
+				damping: 25,
+				stiffness: 500
+			}
+		},
+		exit: {
+			x: '-100vw',
+			opacity: 0,
+		}
+	}
 
 	return (
-		<motion.div className='employeesContainer'>
+		<div 
+			className='employeesContainer'>
 			
 			<div className='employeesHeader mb-2 flex'>
 				<div className='flex w-10/12 justify-evenly'>
@@ -332,7 +352,7 @@ function DisplayEmployees() {
 			
 			<div className='displayEmployeesContainer'>{DisplayEmployees()}</div>
 			
-		</motion.div>
+		</div>
 	)
 }
 
