@@ -9,7 +9,7 @@ import { useContext } from 'react'
 
 const WelcomePage = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
-	setTimeout(() => setRedirectNow(true), 2000)
+	setTimeout(() => setRedirectNow(true), 5000)
 	const {
 		setHideNavBar, setShowNav
 	}
@@ -23,14 +23,14 @@ const WelcomePage = () => {
 	
 	(
 		<motion.div 
-			initial={{ opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
-			className='welcomeContainer'
+			initial={{ x: '100vw'}}
+			animate={{x: 0}}
+			exit={{x: '-100vw'}}
+			transition={{duration: 0.5}}
+			className='welcomeContainer overflow-hidden'
 		>
-			<div className=''>
-					<img className='accentLines' alt='accent line'  src={accentLines}/>
-			</div>
+			<img className='accentLines' alt='accent line'  src={accentLines} />
+			
 			<h2 className='welcomeHeader'>@clkwrkapp</h2>
 			<h6 className='welcomeSubHeader'>-liii</h6>
 			<div className=' flex justify-center'>

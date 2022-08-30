@@ -30,7 +30,9 @@ const UserSettings = () => {
 			className='settingsContainer'
 			initial={{ opacity: 0}}
             animate={{opacity: 1}}
-            exit={{opacity: 0}}>
+            exit={{opacity: 0}}
+			transition={{duration: 1}}
+			>
 				<div className='settings'>
 					<h1 className='settingsHeader'>user settings</h1>
 					<div className='h-full m-10'>

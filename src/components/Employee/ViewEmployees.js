@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { useState, useEffect, useContext } from 'react'
 import { AppContext } from '../../AppContext'
 import ProfileResult from './ProfileResult'
-import AddModal from '../AddModal'
 
 const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) => {
 	
@@ -35,7 +34,6 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 
 function filterShiftResults(arr, fil) {
 	console.log(fil)
-	// setArray(axiosResults)
 	let filteredResults = []
 	for (let i = 0; i < arr.length; i++) {
 		for (let j = 0; j < fil.length; j++) {
@@ -244,26 +242,6 @@ function DisplayEmployees() {
 	const handleDepartmentButtonClick = () => {
 		console.log('department button working')
 		setDepartmentFilter(!departmentFilter)
-	}
-	const dropIn = {
-		hidden: {
-			x: '100vw',
-			opacity: 0,
-		},
-		visible: {
-			x: '0',
-			opacity: 1,
-			transition: {
-				duration: 0.1,
-				type: 'spring',
-				damping: 25,
-				stiffness: 500
-			}
-		},
-		exit: {
-			x: '-100vw',
-			opacity: 0,
-		}
 	}
 
 	return (

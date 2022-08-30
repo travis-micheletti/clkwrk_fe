@@ -29,6 +29,7 @@ const AreaMap = () => {
 			initial={{ opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
+			transition={{duration: 1}}
 		>
 			<div className='fixed z-50 top-0 left-10'><img className='mapAccent' alt='accent line' src={accentLines}/></div>
 			<h1 className='font-raleway text-honeydew font-extrabold text-6xl flex text-center my-20 justify-center items-center'>facility map</h1>

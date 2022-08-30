@@ -78,7 +78,7 @@
 		@apply z-10 xs:w-screen w-fit overflow-scroll sm:w-1/2
 	}
 	.navIconContainer {
-		@apply flex flex-wrap w-fit h-12 justify-center space-x-8 sm:justify-evenly border
+		@apply flex flex-wrap w-fit h-12 justify-center space-x-8 sm:justify-evenly border sm:w-1/2
 	}
 	.outerHomeContainer {
 		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-4 border-pal-cream border-opacity-50 h-screen w-screen
@@ -196,5 +196,8 @@
 	}
 	.employeeModalItem {
 		@apply  border-pal-cream bg-welcome-bg text-pal-cream border-4 w-full
+	}
+	.logPages {
+		@apply bg-bv-crayola h-screen w-screen flex justify-center items-center text-6xl font-raleway font-semibold
 	}
 }

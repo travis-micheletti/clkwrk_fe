@@ -34,6 +34,7 @@ const HomePage = () => {
 			initial={{ opacity: 0}}
 				animate={{opacity: 1}}
 				exit={{opacity: 0}}
+				transition={{duration: 1}}
 				className='outerHomeContainer'
 		>
 			
@@ -42,6 +43,7 @@ const HomePage = () => {
 				initial={{ opacity: 0}}
 				animate={{opacity: 1}}
 				exit={{opacity: 0}}
+				transition={{duration: 1}}
 			>
 				<div className='xs:hidden'>
 					<img className='accentLines' alt='accent line'  src={accentLines}/>

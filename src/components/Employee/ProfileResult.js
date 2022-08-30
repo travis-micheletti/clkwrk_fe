@@ -48,19 +48,6 @@ const ProfileResult = ({firstName, lastName, department, shift, picture, id}) =>
 				
 			})
 		setRollCallBorder(!rollCallBorder)
-		// if (newArray.length > 0) {
-		// 	console.log(`${newArray.length} items left`)
-		// 	const itemIndex = newArray.filter(item => {
-		// 		return item === profileSelected
-		// 	})
-		// 	console.log(itemIndex)
-		// }
-		// console.log(array)
-		// let newArray = []
-		// const newItem = array.slice(e.target, 1)
-		// newArray.push(newItem)
-		// console.log(newArray)
-		
 		rollCallArray()
 	}
 	
@@ -73,6 +60,7 @@ return redirectNow ? (
 			initial={{ opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
+			transition={{duration: 1}}
 	>
 		<div className='infoContainer'>
 			<div>

@@ -7,7 +7,7 @@ import { Navigate } from 'react-router-dom'
 
 const LoggedOut = () => {
 	const [redirectNow, setRedirectNow] = useState(false)
-	setTimeout(() => setRedirectNow(true), 2000)
+	setTimeout(() => setRedirectNow(true), 5000)
 
 	const {
 		loggedIn, setLoggedIn,
@@ -25,8 +25,19 @@ const LoggedOut = () => {
 	return redirectNow ? (
 		<Navigate replace to ='/welcome'/>
 	) : (
-		<motion.div className='displayContainer'>
-			Howdy from the Logged Out Page
+		<motion.div 
+			initial={{ opacity: 0}}
+			animate={{opacity: 1}}
+			exit={{opacity: 0}}
+			transition={{duration: 1}}
+			className='logPages'
+		>
+			<motion.span
+				initial={{ x: '100vw'}}
+				animate={{x: 0}}
+				exit={{x: '-100vw'}}
+				transition={{duration: 2}}
+			>This will one day grow up and be a logout page</motion.span>
 		</motion.div>
 	)
 }

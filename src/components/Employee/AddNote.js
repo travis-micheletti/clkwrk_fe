@@ -80,9 +80,9 @@ const AddNote = () => {
 	console.log(noteType)
 	console.log(profileSelected.employeeLog)
 	return (
-		<motion.div 
+		<div 
 			className={noteModalHidden ? 'hidden' : 'modalContainer'}
-
+			
 		>
 				<form className='modalContents sm:w-1/2'>
 						
@@ -132,7 +132,7 @@ const AddNote = () => {
 					</div>
 					
 				</form>
-		</motion.div>
+		</div>
 	)
 }
 	export default AddNote
