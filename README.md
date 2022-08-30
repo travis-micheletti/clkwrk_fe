@@ -40,13 +40,13 @@
 ![Profile Idea](https://media.git.generalassemb.ly/user/43496/files/217205bf-85b2-4a07-b297-a54209266d43)
 
 ### User Stories:
-> - As a timekeeper, I want to easily login and check off who is in attendance and on-time for the day
-- As a timekeeper, I want to easily mark who is absent/late and be prompted with a message to save to this event
-- As a timekeeper, I want all of these events to automatically log in an attendance log
-- As a department supervisor, I want to be able to know when it's my employee's birthdays
-- As a department supervisor, I want to easily add notes to an employee's employee log
-- As a department supervisor, I need any interactions with the app to be easy and quick as I have other things to do
-- As a production manager, I want to have an easily understood interface that tells me how many employees I have working and in what department
+>  As a timekeeper, I want to easily login and check off who is in attendance and on-time for the day
+> As a timekeeper, I want to easily mark who is absent/late and be prompted with a message to save to this event
+> As a timekeeper, I want all of these events to automatically log in an attendance log
+> As a department supervisor, I want to be able to know when it's my employee's birthdays
+> As a department supervisor, I want to easily add notes to an employee's employee log
+> As a department supervisor, I need any interactions with the app to be easy and quick as I have other things to do
+> As a production manager, I want to have an easily understood interface that tells me how many employees I have working and in what department
 
 ### For potential contributors:
 - If you'd like to be involved, let me know! I love recommendations, assistance and a second set of eyes on things.
