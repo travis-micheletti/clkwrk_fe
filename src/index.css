@@ -37,7 +37,7 @@
 		 @apply z-0
 	}
 	.navBar {
-		@apply absolute bg-slate-800  text-off-purple w-screen h-12 flex flex-row-reverse justify-between items-center p-3 text-4xl
+		@apply absolute bg-slate-800  text-off-purple w-screen h-14 flex flex-row-reverse justify-between items-center p-3 text-4xl
 	}
 
 	.employeePicture {
@@ -53,6 +53,7 @@
 	.displayEmployeesContainer {
 		@apply flex flex-row sm:justify-evenly sm:w-1/2 w-screen flex-wrap justify-evenly 
 		 border-4 outline-4 outline-welcome-bg outline mt-2 pt-1 rounded-lg text-white
+		 overflow-y-scroll
 		
 	}
 
@@ -78,14 +79,14 @@
 		@apply z-10 xs:w-screen w-fit overflow-scroll sm:w-1/2
 	}
 	.navIconContainer {
-		@apply flex flex-wrap w-fit h-12 justify-center space-x-8 sm:justify-evenly sm:w-1/2
+		@apply flex flex-wrap w-fit h-14 justify-center space-x-8 sm:justify-evenly sm:w-1/2
 	}
 	.outerHomeContainer {
 		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-4 border-pal-cream border-opacity-50 h-screen w-screen
 	}
 
 	.navIcons {
-		@apply flex flex-col justify-center h-12 items-center
+		@apply flex flex-col justify-center h-14 items-center
 	}
 
 	.welcomeHeader {

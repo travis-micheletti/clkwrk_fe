@@ -35,7 +35,7 @@ const WelcomePage = () => {
 			<h6 className='welcomeSubHeader'>-liii</h6>
 			<div className=' flex justify-center'>
 				<h2 className='welcomeMessage'>welcome to</h2>
-				<img className='xs:w-to-fit sm:h-3/4 sm:mt-30' src='https://i.postimg.cc/N0XKpd1n/logof.png' alt='logo'></img>
+				<img className='xs:w-to-fit sm:w-3/4 sm:mt-30' src='https://i.postimg.cc/N0XKpd1n/logof.png' alt='logo'></img>
 			</div>
 			
 			
