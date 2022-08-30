@@ -30,27 +30,27 @@ const NavBar = () => {
 				animate={{opacity: 1}}
 				exit={{opacity: 0}}
 		>
-			<div>
+			<div className='navIcons'>
 				{showNav ? 
 				<IoExit className='cursor-pointer' onClick={handleShowNavClick}/> : <GiHamburgerMenu className='cursor-pointer' onClick={handleShowNavClick}/>}
-				<span className='fixed text-white text-xs right-5 top-8 sm:hidden'>{!showNav ? 'nav' : ''}</span>
+				<span className=' text-white text-xs right-5 top-8 sm:hidden'>{!showNav ? 'nav' : ''}</span>
 			</div>
 			<div className={showNav ? 'navIconContainer' : 'hidden'}>
-				<div className='justify-center items-center'>
+				<div className='navIcons'>
 					<Link to='/home'><FaHome/></Link>
-					<span className='fixed text-white text-xs left-27 top-8 sm:hidden'>home</span>
+					<span className=' text-white text-xs sm:hidden'>home</span>
 				</div>
-				<div className='justify-center items-center'>
+				<div className='navIcons'>
 					<Link to='/employees'><BsFillPeopleFill /></Link>
-					<span className='fixed text-white text-xs -ml-3 top-8 sm:hidden'>employees</span>
+					<span className=' text-white text-xs sm:hidden'>people</span>
 				</div>
-				<div>
+				<div className='navIcons'>
 					<Link to ='map'><FaMapMarkerAlt/></Link>
-					<span className='fixed text-white text-xs ml-1 top-8 sm:hidden'>map</span>
+					<span className=' text-white text-xs  sm:hidden'>map</span>
 				</div>
-				<div>
+				<div className='navIcons'>
 					<Link to='/settings'><IoSettings/></Link>
-					<span className='fixed text-white text-xs -ml-2 top-8 sm:hidden'>settings</span>
+					<span className=' text-white text-xs sm:hidden'>settings</span>
 				</div>
 			</div>
 				

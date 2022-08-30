@@ -28,7 +28,6 @@ const ViewEmployees = ({firstName, lastName, picture, department, shift, id}) =>
 	const {
 		array, setArray,
 		axiosResults, setAxiosResults,
-		setAddModal, setAddModalClass,
 		rollCallMode, setRollCallMode,
 		setHideNavBar
 	} 
@@ -61,13 +60,6 @@ function filterDepartmentResults(arr, fil) {
 		} setArray(filteredResults)
 	} 
 }
-
-// useEffect(() => {
-// 	setShiftFilter(!shiftFilter)
-// },[shiftFilter])
-// useEffect(() => {
-// 	setDepartmentFilter(!departmentFilter)
-// }, [departmentFilter])
 
 
 
@@ -102,25 +94,6 @@ function DisplayEmployees() {
 		})
 	
 }
-
-
-    // function callAddModal() {
-    //     setTimeout(() => {
-    //         setAddModalClass('AddModal-container')
-    //     }, 1);
-    //     setAddModal(
-    //         <AddModal
-    //             firstName={firstName}
-    //             lastName={lastName}
-    //             department={department}
-    //             shift={shift}
-    //             picture={picture}
-	// 			id={id}
-    //         />
-		
-    //     )
-	// 	// console.log('hi from add modal call')
-    // }
 
 	function handleGreenCheck() {
 		setGreenChecked(!greenChecked)

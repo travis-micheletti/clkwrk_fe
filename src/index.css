@@ -78,10 +78,14 @@
 		@apply z-10 xs:w-screen w-fit overflow-scroll sm:w-1/2
 	}
 	.navIconContainer {
-		@apply flex flex-wrap w-full justify-center space-x-8 sm:justify-evenly
+		@apply flex flex-wrap w-fit h-12 justify-center space-x-8 sm:justify-evenly border
 	}
 	.outerHomeContainer {
 		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-4 border-pal-cream border-opacity-50 h-screen w-screen
+	}
+
+	.navIcons {
+		@apply flex flex-col justify-center h-12 items-center
 	}
 
 	.welcomeHeader {

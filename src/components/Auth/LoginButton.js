@@ -14,14 +14,14 @@ const LoginButton = () => {
 		= useContext(AppContext)
 
 	return loggedIn ? (
-		<div className='logButton'>
+		<div className='navIcons'>
 			<Link to='/logged-out'><BsFillPersonCheckFill/></Link>
-			<span className='fixed text-white text-xs left-2 top-8 sm:hidden'>login</span>
+			<span className=' text-white text-xs  top-8 sm:hidden'>login</span>
 		</div>
 	) : (
-		<div className='logButton'>
+		<div className='navIcons'>
 			<Link to='/logged-in'><BsPersonXFill/></Link>
-			<span className='fixed text-white text-xs left-2 top-8 sm:hidden'>logout</span>
+			<span className=' text-white text-xs l top-8 sm:hidden'>logout</span>
 		</div>
 	)
 	
