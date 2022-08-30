@@ -31,13 +31,13 @@
 	- Sketch
 
 ### Initial Wireframes:
-! [Welcome Page](https://media.git.generalassemb.ly/user/43496/files/182efa94-dcc5-40cd-b9e1-3192aaa7159f)
-! [Home Screen](https://media.git.generalassemb.ly/user/43496/files/ba78f192-7351-4520-954e-1822118070d0)
-! [Employees Screen](https://media.git.generalassemb.ly/user/43496/files/881809cf-0907-4977-b415-24fb55f9c4da)
-! [2nd Employees Screen](https://media.git.generalassemb.ly/user/43496/files/a14c36d2-265a-4e77-8e04-f99e4c97f960)
-! [Log Example](https://media.git.generalassemb.ly/user/43496/files/9536ee4f-ec9b-4519-9a88-562e195acb15)
-! [Map Page](https://media.git.generalassemb.ly/user/43496/files/30bd9305-62d7-4eb3-95f1-eb141f664512)
-! [Profile Idea](https://media.git.generalassemb.ly/user/43496/files/217205bf-85b2-4a07-b297-a54209266d43)
+![Welcome Page](https://media.git.generalassemb.ly/user/43496/files/182efa94-dcc5-40cd-b9e1-3192aaa7159f)
+![Home Screen](https://media.git.generalassemb.ly/user/43496/files/ba78f192-7351-4520-954e-1822118070d0)
+![Employees Screen](https://media.git.generalassemb.ly/user/43496/files/881809cf-0907-4977-b415-24fb55f9c4da)
+![2nd Employees Screen](https://media.git.generalassemb.ly/user/43496/files/a14c36d2-265a-4e77-8e04-f99e4c97f960)
+![Log Example](https://media.git.generalassemb.ly/user/43496/files/9536ee4f-ec9b-4519-9a88-562e195acb15)
+![Map Page](https://media.git.generalassemb.ly/user/43496/files/30bd9305-62d7-4eb3-95f1-eb141f664512)
+![Profile Idea](https://media.git.generalassemb.ly/user/43496/files/217205bf-85b2-4a07-b297-a54209266d43)
 
 ### User Stories:
 > - As a timekeeper, I want to easily login and check off who is in attendance and on-time for the day
