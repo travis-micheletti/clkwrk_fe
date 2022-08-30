@@ -1,11 +1,9 @@
-// Profile Page - > displays Welcome to the logged in user, navigation and a graphic/quote for now?
-// axios calls: get employee (will need to pass down employee information as context) get employee log, post new note to employee log (need a dropdown form), edit employee(dropdown form), delete employee
+// profile page that pulls content based on the profile selected state - may change to an axios/api call in the future if it is more efficient
 
 import { motion } from 'framer-motion'
 import { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../AppContext'
 import Moment from 'react-moment'
-// import 'moment-timezone'
 import EmployeeLog from './EmployeeLog'
 import AddNote from './AddNote'
 

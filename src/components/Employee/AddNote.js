@@ -1,6 +1,7 @@
+// component for adding a note from the employee's profile page
+
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../AppContext"
-import { motion } from 'framer-motion'
 import axios from "axios"
 import Moment from 'react-moment'
 

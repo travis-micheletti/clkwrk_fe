@@ -1,3 +1,5 @@
+// using animatepresence to animate between the different routes of my project with the framer motion library
+
 // dependencies for animating the route paths
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'

@@ -1,5 +1,4 @@
-// User settings - > allows users to change their passwords, update emails, and admins to change permissions
-// make this a modal that drops down over current page to keep navigation simple 
+// User settings - > as for right now only allows for adding of an employee but will include more functionality after auth is added
 
 import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'

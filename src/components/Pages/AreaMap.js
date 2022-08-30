@@ -1,3 +1,5 @@
+// terribly formatted page for displaying a map lol - will add gogole api integration down the line
+
 import { motion } from 'framer-motion'
 import { useEffect, useState, useContext } from 'react'
 import map from '../../images/maptest.svg'

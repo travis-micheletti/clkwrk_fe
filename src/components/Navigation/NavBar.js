@@ -1,4 +1,4 @@
-// Nav Bar - > displays on all pages from the home page and on 
+// Nav bar componenet for conditionally displaying different pieces of navigation
 import { Link } from 'react-router-dom'
 import LoginButton from '../Auth/LoginButton'
 import { motion } from 'framer-motion'

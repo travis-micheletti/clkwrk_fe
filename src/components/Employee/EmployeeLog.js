@@ -1,9 +1,7 @@
-// Employee Log - > displays all notes reverse chronologically and allows for filtering of different types of notes
-// here we will do an axios.get for the employee log that pulls from the selected employee's array of logs
+// Employee log isn't working properly right now due to some issues with updating the employeeLog array in Mongo - need to figure out best way as the methods I tried weren't working
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../AppContext"
 import { motion } from 'framer-motion'
-import Moment from 'react-moment'
 
 
 

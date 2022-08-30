@@ -1,6 +1,7 @@
+// component for adding a an employee to the database - can be accessed from the user settings page
+
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../AppContext"
-import { motion } from 'framer-motion'
 import axios from "axios"
 
 
