@@ -14,11 +14,20 @@
 	.modalContainer {
 		@apply h-full w-screen flex flex-col justify-center items-center z-10
 	}
+	.employeeModalContainer {
+		@apply h-fit w-screen flex flex-col justify-center items-center z-10 
+	}
 	.modalArea {
 		@apply h-3/5 w-screen fixed flex justify-center
 	}
+	.employeeModalArea {
+		@apply border fixed 
+	}
 	.modalContents {
 		@apply flex flex-col border-4 rounded-2xl items-center w-5/6 h-3/5 bg-bv-crayola justify-around
+	}
+	.employeeModalContents {
+		@apply flex flex-col border-4 rounded-2xl items-center fixed top-60 w-screen h-fit bg-bv-crayola justify-center outline outline-8
 	}
 	.modalItem {
 		@apply border-pal-orange bg-welcome-bg text-pal-cream border-4
@@ -72,7 +81,7 @@
 		@apply flex flex-wrap w-full justify-center space-x-8 sm:justify-evenly
 	}
 	.outerHomeContainer {
-		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-8 border-pal-cream border-opacity-100 h-screen w-screen
+		@apply m-auto text-deep-brown flex flex-col justify-center items-center bg-bv-crayola border-x-4 border-pal-cream border-opacity-50 h-screen w-screen
 	}
 
 	.welcomeHeader {
@@ -107,16 +116,19 @@
 		@apply z-0
 	}
 	.arrowContainer {
-		@apply xs:h-screen flex
+		@apply xs:h-screen flex 
 	}
 	.arrow {
-		@apply xs:fixed xs:left-14 z-10 -top-3
+		@apply fixed xs:left-14 z-10 -top-3 sm:right-14
 	}
 	.homeTextContainer {
-		@apply font-raleway text-honeydew font-extrabold h-screen  text-5xl flex text-center justify-center items-center -mt-30
+		@apply font-raleway text-honeydew h-2/3  text-5xl flex text-center justify-center items-center sm:w-screen sm:justify-end
 	}
 	.homeText {
-		@apply  w-1/2
+		@apply  w-1/2  h-fit sm:w-1/12 sm:fixed sm:right-36 sm:top-48
+	}
+	.clkwrkHome {
+		@apply h-1/2 w-screen xs:mb-20 flex justify-center
 	}
 	.tutorial {
 		@apply font-sora-main text-2xl font-bold text-honeydew
@@ -180,5 +192,8 @@
 	}
 	.setting {
 		@apply border text-center h-1/3 flex justify-center items-center text-2xl text-honeydew bg-welcome-bg my-4
+	}
+	.employeeModalItem {
+		@apply  border-pal-cream bg-welcome-bg text-pal-cream border-4 w-full
 	}
 }

@@ -32,6 +32,10 @@ module.exports = {
         'sora-main': 'Sora',
         'raleway': 'Raleway'
       },
+      fontSize: {
+        'title': '8.5rem',
+        '8.5': '7rem'
+      },
       height: {
         'to-fit': '90%'
       },

@@ -4,27 +4,41 @@
 import { motion } from 'framer-motion'
 import { useContext, useEffect } from 'react'
 import { AppContext } from '../../AppContext'
+import AddEmployee from '../Employee/AddEmployee'
 
 const UserSettings = () => {
 
 	const {
-		setHideNavBar
+		setHideNavBar, employeeModalHidden,
+		setEmployeeModalHidden
 	}
 		= useContext(AppContext)
 	
 	useEffect(() => {
 		setHideNavBar(false)
+		setEmployeeModalHidden(true)
 	}, [])
+
+
+	const handleAddEmployee = () => {
+		setEmployeeModalHidden(!employeeModalHidden)
+		console.log(employeeModalHidden)
+	}
+
 	return (
 		<motion.div className='settingsContainer'>
 			<div className='settings'>
 				<h1 className='settingsHeader'>user settings</h1>
 				<div className='h-full m-10'>
-						<div className='setting'>Setting 1</div>
-						<div className='setting'>Setting 2</div>
-						<div className='setting'>Setting 3</div>
+						<div className='setting'><button className='cursor-pointer' onClick={handleAddEmployee}>add employee</button></div>
+						<div className='setting'>setting 2</div>
+						<div className='setting'>setting 3</div>
 				</div>
-			</div>			
+			</div>
+
+			<div className={employeeModalHidden ? 'hidden' : 'employeeModalArea'}>
+				<AddEmployee />
+			</div>					
 		</motion.div>
 	)
 }

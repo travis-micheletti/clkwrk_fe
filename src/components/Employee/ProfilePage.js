@@ -7,7 +7,6 @@ import { AppContext } from '../../AppContext'
 import Moment from 'react-moment'
 // import 'moment-timezone'
 import EmployeeLog from './EmployeeLog'
-import AreaMap from '../Pages/AreaMap'
 import AddNote from './AddNote'
 
 

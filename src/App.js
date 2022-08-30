@@ -27,6 +27,7 @@ function App() {
   const [showNav, setShowNav] = useState(false)
   const [noteModalHidden, setNoteModalHidden] = useState(true)
   const [logModalHidden, setLogModalHidden] = useState(true)
+  const [employeeModalHidden, setEmployeeModalHidden] = useState(true)
 
 
   return (
@@ -50,7 +51,8 @@ function App() {
           hideNavBar, setHideNavBar,
           showNav, setShowNav,
           noteModalHidden, setNoteModalHidden,
-          logModalHidden, setLogModalHidden
+          logModalHidden, setLogModalHidden,
+          employeeModalHidden, setEmployeeModalHidden
         }
         
       }> 
