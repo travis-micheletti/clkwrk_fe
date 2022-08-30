@@ -31,10 +31,10 @@ const NavBar = () => {
 				exit={{opacity: 0}}
 				transition={{duration: 1}}
 		>
-			<div className='navIcons'>
+			<div className='navIcons z-20'>
 				{showNav ? 
 				<IoExit className='cursor-pointer' onClick={handleShowNavClick}/> : <GiHamburgerMenu className='cursor-pointer' onClick={handleShowNavClick}/>}
-				<span className=' text-white text-xs right-5 top-8 sm:hidden'>{!showNav ? 'nav' : ''}</span>
+				<span className=' text-white text-xs z-20 right-5 top-8 sm:hidden'>{!showNav ? 'nav' : ''}</span>
 			</div>
 			<div className={showNav ? 'navIconContainer' : 'hidden'}>
 				<div className='navIcons'>

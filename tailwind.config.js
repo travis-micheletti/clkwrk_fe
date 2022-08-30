@@ -49,7 +49,9 @@ module.exports = {
         '30': '7.2rem',
         '21': '5.3rem',
         '22': '5.5rem',
-        '31': '7.5rem'
+        '31': '7.5rem', 
+        '68': '17rem',
+        '33': '33vh'
       },
       screens: {
         'xs': {'min':'1px', 'max': '575px'},

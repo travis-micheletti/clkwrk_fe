@@ -2,7 +2,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AppContext } from '../../AppContext'
-import accentLines from '../../images/accentLines.svg'
 import arrow from '../../images/arrow.svg'
 
 
@@ -46,17 +45,18 @@ const HomePage = () => {
 				transition={{duration: 1}}
 			>
 				<div className='xs:hidden'>
-					<img className='accentLines' alt='accent line'  src={accentLines}/>
+					{/* <img className='accentLines' alt='accent line'  src={accentLines}/> */}
 				</div>
 				<div className={!hideArrow ? 'hidden' : 'arrowContainer'}>
 						<img className='arrow' alt='arrow graphic' src={arrow}/>
 						<div className='homeTextContainer'>
-							<h1 className='homeText xs:fixed xs:top-60'>get started  here</h1>
+							<h1 className='homeText xs:fixed xs:top-24 xs:w-1/3 xs:left-10 xs:text-xl'>get started  here</h1>
 						</div>
 				</div>
 			
-				<div className={!hideArrow ? 'clkwrkHome fixed bottom-0 h-1/4 xs:hidden ' : 'clkwrkHome '}>
-							<img src='https://i.postimg.cc/N0XKpd1n/logof.png' className='h-full xs:mb-10 xs:h-auto' alt='logo'/>
+				<div className={!hideArrow ? 'clkwrkHome fixed bottom-0 h-1/4 xs:hidden ' : 'clkwrkHome'}>
+							<img src='https://i.postimg.cc/N0XKpd1n/logof.png' className='h-full xs:fixed xs:left-1 xs:bottom-33  xs:h-auto' alt='logo'/>
+							<h2 className={!hideArrow ? 'hidden' : 'font-raleway fixed text-3xl text-center w-1/2  flex flex-col justify-center bottom-20 h-40 text-honeydew font-extrabold'}>keeping workforces productive 24/7</h2>
 				</div>
 				<div className={!hideArrow ? 'tutorial' : 'hidden'}>
 					<ul className='tutorialList'>
@@ -68,7 +68,7 @@ const HomePage = () => {
 					</ul>
 				</div>
 				<div className='clockedIn'>Logged in as: {currentUser}!</div>
-				<div className=''><img className='accentLinesBottom' alt='accent line' src={accentLines}/></div>
+				{/* <div className=''><img className='accentLinesBottom' alt='accent line' src={accentLines}/></div> */}
 			</motion.div>
 		</motion.div>
 	)

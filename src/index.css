@@ -103,7 +103,7 @@
 		@apply w-screen h-screen flex justify-start items-end mb-10 z-0 fixed
 	}
 	.homeContainer {
-		@apply m-auto flex flex-col justify-center items-center rounded-2xl h-to-fit w-to-fit 
+		@apply m-auto flex flex-col justify-center items-center h-to-fit w-to-fit 
 	}
 	.accentLines {
 		@apply h-3/4 fixed -left-60 -top-80 z-0 tabs:h-1/2
@@ -124,13 +124,13 @@
 		@apply xs:h-screen flex 
 	}
 	.arrow {
-		@apply fixed xs:left-14 z-10 -top-3 sm:right-14
+		@apply fixed xs:left-6 z-10 -top-3 sm:-right-16 sm:h-33
 	}
 	.homeTextContainer {
 		@apply font-raleway text-honeydew h-2/3  text-5xl flex text-center justify-center items-center sm:w-screen sm:justify-end
 	}
 	.homeText {
-		@apply  w-1/2  h-fit sm:w-1/12 sm:fixed sm:right-36 sm:top-48
+		@apply  w-1/2  h-fit sm:w-1/12 sm:fixed sm:right-96 sm:top-40 sm:text-2xl
 	}
 	.clkwrkHome {
 		@apply h-1/2 w-screen xs:mb-20 flex justify-center
