@@ -3,7 +3,7 @@
 
 ### Version 1.0 notes:
 - This is the baseline prototype of clkwrk, an app meant to increase visibility and productivity of employees in production facilities, primarily environments relying on 24-hour production.
-- I have a lot of big plans for this app and the biggest challenge I found was deciding where true MVP for the purposes of this project fell. I found seemingly ane asy solution for authorization early on in the project and put it on the backburner to focus on more time-consuming features, all to run into a number of issues with authorization on the last day prior to the project being due. All in all there are a number of features that I have yet to implement but am very proud of the baseline I built for this app.
+- I have a lot of big plans for this app and the biggest challenge I found was deciding where true MVP for the purposes of this project fell. I found a seemingly easy solution for authorization early on in the project and put it on the backburner to focus on more time-consuming features, all to run into a number of issues with authorization on the last day prior to the project being due. All in all there are a number of features that I have yet to implement but am very proud of the baseline I built for this app.
 - I learned quite a bit about making and working with SVG imagery in the designing of the logo for this app. It's the first real graphic design I've done in a long time and it feels great to be diggin into the design side of things again. It was my first time using Sketch and while there are a lot of interesting features and advantages to using it, I also would like to explore some other apps now that I'm moving away from canva and exploring dynamic design tools.
 
 ### Features to come:
