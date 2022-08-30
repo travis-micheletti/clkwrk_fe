@@ -1,3 +1,5 @@
+// Authorization not currently working - this will be the component that displays a welcome message after login
+
 import { AppContext } from '../../AppContext'
 import { useContext, useEffect, useState} from 'react'
 import { motion } from 'framer-motion'

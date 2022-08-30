@@ -1,4 +1,4 @@
-// Logged out page - > displays simple logged out screen before redirecting to the welcome screen again
+// Authorization not currently working - this will be the component that displays a farwell message after logout
 import { AppContext } from '../../AppContext'
 import { useContext, useEffect, useState} from 'react'
 import { motion } from 'framer-motion'

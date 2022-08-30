@@ -1,4 +1,4 @@
-// Landing page - > displays graphic/welcome message/app name and transitions out after a delay
+// Landing page - > displays between login and logout animations
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'

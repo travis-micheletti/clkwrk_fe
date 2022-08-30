@@ -1,4 +1,4 @@
-// import { useAuth0 } from '@auth0/auth0-react'
+// Authorization not complete but this is the button that will handle the loggin in and out functions - currently navigates to logged in and logged out components respectively
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../../AppContext'
